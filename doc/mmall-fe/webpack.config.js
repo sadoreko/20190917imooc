@@ -2,7 +2,7 @@
  * @Author: SherryWong 
  * @Date: 2019-09-17 18:50:13 
  * @Last Modified by: SherryWong
- * @Last Modified time: 2019-09-19 09:25:29
+ * @Last Modified time: 2019-09-19 12:29:20
  */
 // 初始版本
 // module.exports = {
@@ -270,10 +270,68 @@
 // ---------------------------------------------------------------
 
 // 把添加html模版的参数提取成函数
+// var path = require('path');
+// var webpack = require('webpack');
+// var ExtractTextPlugin = require('extract-text-webpack-plugin');
+// var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// // 获取html-webpack-plugin参数的方法 
+// var getHtmlConfig = function(name, title){
+//   return {
+//       template    : './src/view/' + name + '.html',
+//       filename    : 'view/' + name + '.html',
+//       // favicon     : './favicon.ico',  // 因为我没有./favicon.ico, 所以这句先注释掉, 不然报错 could not load file /Users/sherrywong/Documents/GitHub/20190917imooc/doc/mmall-fe/favicon.ico
+//       title       : title,
+//       inject      : true,
+//       hash        : true,
+//       chunks      : ['common', name]
+//   };
+// };
+// var config = {
+//   mode: 'development',
+//   entry: {
+//     'index': ['./src/page/index/index.js'],
+//     'test': ['./src/page/index/测试多入口的webpack.js'],
+//     'jquery': ['./src/page/index/引入jquery.js'],
+//     'common': ['./src/page/common/commonindex.js'],
+//   },
+//   output: {
+//     path: path.resolve(__dirname, 'dist'),
+//     filename: 'js/[name].bundle.js'
+//   },
+//   externals: {
+//     'jquery': 'window.jQuery'
+//   },
+//   module: {
+//     loaders: [
+//       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') }
+//     ]
+//   },
+//   plugins: [
+//     // 独立通用模块到js/base.js
+//     new webpack.optimize.CommonsChunkPlugin({
+//       name : 'common',
+//       filename : 'js/base.js' 
+//     }),
+//     // 把css单独打包到文件里
+//     new ExtractTextPlugin("css/[name].css"),
+//     // 处理html模版
+//     new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+//   ]
+// };
+// module.exports = config;
+
+// ---------------------------------------------------------------
+
+
+// webpack-dev-sever
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// 环境变量配置，dev / online
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 
 // 获取html-webpack-plugin参数的方法 
 var getHtmlConfig = function(name, title){
@@ -297,6 +355,7 @@ var config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',
     filename: 'js/[name].bundle.js'
   },
   externals: {
@@ -304,8 +363,20 @@ var config = {
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') },
+      { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=/resource/[name].[ext]' }
+      // 注意这里的路径, name=/resource/[name].[ext], 路径不对的话, 编译出来的文件会找不到图片
     ]
+  },
+  devServer: {
+    port: 8088,
+    inline: true,
+    proxy : {
+        '**/*.do' : {
+            target: 'http://test.happymmall.com',
+            changeOrigin : true
+        }
+    },
   },
   plugins: [
     // 独立通用模块到js/base.js

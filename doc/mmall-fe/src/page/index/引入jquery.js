@@ -2,7 +2,7 @@
  * @Author: SherryWong 
  * @Date: 2019-09-18 11:12:35 
  * @Last Modified by: SherryWong
- * @Last Modified time: 2019-09-18 13:05:04
+ * @Last Modified time: 2019-09-19 11:29:07
  */
 
 'use strict';
@@ -28,9 +28,6 @@
 // externals: {
 //   'jquery': 'window.jQuery'
 // }
-
-// 测试公共模块
-require('../CommonsChunkPlugin提取公共模块.js');
 
 var $$ = require('jquery');
 $$('body').html('用模块形式使用jquery');

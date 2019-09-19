@@ -15,7 +15,7 @@ webpackJsonp([2],{
 	 * @Author: SherryWong 
 	 * @Date: 2019-09-18 11:12:35 
 	 * @Last Modified by: SherryWong
-	 * @Last Modified time: 2019-09-18 13:05:04
+	 * @Last Modified time: 2019-09-19 11:29:07
 	 */
 
 	'use strict';
@@ -41,9 +41,6 @@ webpackJsonp([2],{
 	// externals: {
 	//   'jquery': 'window.jQuery'
 	// }
-
-	// 测试公共模块
-	__webpack_require__(3);
 
 	var $$ = __webpack_require__(11);
 	$$('body').html('用模块形式使用jquery');

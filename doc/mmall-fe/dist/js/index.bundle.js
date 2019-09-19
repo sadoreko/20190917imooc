@@ -14,25 +14,23 @@ webpackJsonp([1],[
 	 * @Author: SherryWong 
 	 * @Date: 2019-09-17 18:50:18 
 	 * @Last Modified by: SherryWong
-	 * @Last Modified time: 2019-09-18 12:20:08
+	 * @Last Modified time: 2019-09-19 11:28:26
 	 */
 
-	// 测试公共模块
 	__webpack_require__(3);
-	__webpack_require__(4);
 
 	cats = __webpack_require__(9);
 	console.log(cats);
 
 
 /***/ }),
-/* 3 */,
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
+/* 4 */,
 /* 5 */,
 /* 6 */,
 /* 7 */,
