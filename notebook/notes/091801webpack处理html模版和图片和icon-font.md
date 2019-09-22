@@ -1,3 +1,7 @@
+## webpack处理html模版
+
+
+
 最终发布的是webpack打包的/dist/文件夹, /src/文件夹是不管的, 所以需要把html文件打包到/dist/里
 
 
@@ -109,4 +113,50 @@ var webpackConfig = {
      <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
    </body>
    </html>
+   ```
+
+
+
+
+## webpack处理图片和icon-font字体文件
+
+1. webpack.config.js
+
+   ```javascript
+   module: {
+       loaders: [
+         { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=./resource/[name].[ext]' }
+       ]
+     },
+   ```
+   `limit=100`  如果图片小于100, 就转换成base64格式保存; 如果大于100, 就以图片文件保存
+
+   `name=resource/[name].[ext]`  打包好的文件保存在/resource/下, 文件名、扩展名都是图片原本的名字, 例如文件原先是tom.png, 打包后是dist/resource/tom.png
+
+   `woff|svg|eot|ttf` 是字体文件扩展名
+
+2. `npm install url-loader@0.5.8 --save-dev`  
+
+   注: 正常版本的url-loader报错 url-loader@2.1.0 requires a peer of webpack@^4.0.0, 需要指定版本;
+
+   $ webpack 会报错Cannot find module 'file-loader' —— url-loader依赖file-loader，指定版本装一下
+
+   `npm install file-loader@0.11.1 --save-dev`  
+
+3. /src/page/index/index.css
+
+   ```css
+   body{
+     background-image: url('../../image/tom.png');
+   }
+   ```
+
+4. $ webpack
+
+5. /dist/css/index.css
+
+   ```css
+   body{
+     background-image: url(resource/tom.png);
+   }
    ```
