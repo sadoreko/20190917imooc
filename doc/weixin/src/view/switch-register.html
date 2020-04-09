@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+	<%= require('html-loader!./layout/head-common.html') %>
+	<title><%= htmlWebpackPlugin.options.title%></title>
+	<!-- 
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/switch-supplier-route.js"></script> -->
+</head>
+
+<body>
+	<header><a id="backLink" href="javascript:;"></a>
+		<p><%= htmlWebpackPlugin.options.title%></p>
+	</header>
+	<div class="section-common bg_white h100">
+		<!--手机号登录 开始-->
+		<div class="login">
+			<div class="user_head"><img src="<%= require('../images/logo.png') %>" alt=""></div>
+			<p class="jihuo">国际采购湖南第一站</p>
+			<p class="jihuo">湖南产品全球售</p>
+			<p class="jihuo_prompt">轻松做出口，来这里就对了！</p>
+
+			<div class="form-group" id="simpleTitle">
+				<label class="titleAppend"><b style="font-size: 0.7rem;color: #45a4fd;">人工注册</b></label>
+			</div>
+			<div class="form-group radio" id="simpleDoc">
+				<input type="radio" id="agreeSimple" name="agree" value="0">
+				<label style="font-size: 0.6rem;">您只需要提交基本信息，我们将第一时间和您联系进行确认！</label>
+			</div>
+
+			<br>
+
+			<div class="form-group" id="QkTitle">
+				<label class="titleAppend"><b style="font-size: 0.7rem;color: #45a4fd;">快捷注册</b></label>
+			</div>
+			<div class="form-group radio" id="QkDoc">
+				<input type="radio" id="agreeQuiky" name="agree" value="1">
+				<label style="font-size: 0.6rem;">您需要提交相对完备的信息，当然除必要信息外可以选填或跳过，您输入的信息越完备，评估的分值将越高，越容易获得官方的推荐！</label>
+			</div>
+
+			<div class="log_btn" id="goLogin"> <a class="btn" href="javascript:;" id="btnSwitch">已有账号,直接登录</a> </div>
+		</div>
+		<!--手机号登录 结束-->
+	</div>
+
+	<%= require('html-loader!./layout/footer.html') %>
+</body>
+
+</html>

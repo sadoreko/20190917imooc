@@ -1,1 +1,0 @@
-console.log('测试多入口的webpack.config.js');

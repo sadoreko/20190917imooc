@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+		<script language="JavaScript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	</head>
+
+	<body>
+			<!--头部 开始-->
+			<!--导航栏-->
+			<header class="fr-top">
+				<h4 id="frmTitle">
+					国际采购湖南第一站<br>轻松做出口，马上入驻！</h4>
+			</header>
+
+			<main>
+				<form class="biaodan">
+					<!--基本概况 开始-->
+					<section id="step1">
+						<label> <span><b>*</b>个体工商户/公司名称</span>
+					      <input placeholder="请输入个体工商户/公司名称" type="text" tabindex="1" name="orgNameZh" id="orgNameZh" maxlength="60">
+					      <span style="color: red;display: none;" id="errMsgOrgNameZh">请输入个体工商户/公司名称!  </span>
+				    	</label>
+						<label> <span><b>*</b>邮箱地址<br>(邮箱将作为登录账户使用，请牢记！)</span>
+					      <input placeholder="请输入邮箱地址" type="email" tabindex="2" name="loginAccount" id="loginAccount" maxlength="60">
+					      <span style="color: red;display: none;" id="errMsgEmail">请输入邮箱地址!</span>	
+					      <span style="color: red;display: none;" id="errMsgEmailFormat">请输入正确的邮箱地址格式!</span>						      
+				    	</label>
+						<label> <span><b>*</b>登录密码<br>(在登录微信公众号和管理后台时使用，请牢记！)</span>
+					      <input placeholder="请输入登录密码" type="password" tabindex="3" name="loginPassword" id="loginPassword" maxlength="60">
+					      <span style="color: red;display: none;" id="errMsgLoginPassword">请输入登录密码!  </span>
+				    	</label>
+						<label> <span><b>*</b>公司法人(选填)</span>
+					      <input placeholder="请输入公司法人" type="text" tabindex="4" name="corporation" id="corporation" maxlength="50">
+					      <!--<span style="color: red;display: none;" id="errMsgCorporation">请输入公司法人!  </span>-->
+				    	</label>
+						<label> <span><b>*</b>联系人姓名</span>
+					      <input placeholder="请输入联系人姓名" type="text" tabindex="5" name="contact" id="contact" maxlength="50">
+					      <span style="color: red;display: none;" id="errMsgContact">请输入联系人姓名!  </span>
+				    	</label>
+						<label> <span><b>*</b>联系人电话</span>
+					      <input placeholder="请输入联系人电话" type="text" tabindex="6" name="contactTel" id="contactTel" maxlength="50">
+					      <span style="color: red;display: none;" id="errMsgContactTel">请输入联系人电话!  </span>
+				    	</label>
+
+						<label> <span><b>*</b>公司地址</span>
+					      <input type="text" class="cell-input" id="picker" placeholder="请选择所在地址" tabindex="7">
+					      <img src="<%= require('../images/icon_more_black.png') %>" class="add" style="width: 23px;height: 23px;" id="selectBtn">	
+					      <span style="color: red;display: none;" id="errMsgAddress">请选择公司所在地址!  </span>		      
+				    	</label>
+						<textarea placeholder="请输入详细地址" name="police" id="police" maxlength="500" tabindex="8" style="height: 30px;"></textarea>
+						<span style="color: red;display: none;" id="errMsgPolice">请输入详细地址!  </span>
+
+						<label> <span><b>*</b>请选择公司的主要产品(点击选中) <b style="color: red;display: none;" id="errMsgMainProducts">至少选择一项或输入其他产品!  </b></span>
+							<div class="product-tag">
+								<div class="tag-list" >
+									<a class="item w1" name="mainProducts" data="陶瓷">陶瓷</a>
+									<a class="item w1" name="mainProducts" data="假发">假发</a>
+									<a class="item w1" name="mainProducts" data="湘绣">湘绣</a>
+									<a class="item w1" name="mainProducts" data="服装">服装</a>
+									<a class="item w1" name="mainProducts" data="鞋类">鞋类</a>
+									<a class="item w1" name="mainProducts" data="箱包">箱包</a>
+									<a class="item w1" name="mainProducts" data="茶叶">茶叶</a>
+									<a class="item w1" name="mainProducts" data="玩具">玩具</a>
+									<a class="item w2" name="mainProducts" data="日用百货">日用百货</a>
+									<a class="item w2" name="mainProducts" data="日化用品">日化用品</a>
+									<a class="item w2" name="mainProducts" data="家居用品">家居用品</a>
+									<a class="item w2" name="mainProducts" data="小五金">小五金</a>   
+									<a class="item w2" name="mainProducts" data="小家电">小家电</a>   
+									<a class="item w2" name="mainProducts" data="仿真花">仿真花</a>   
+									<a class="item w2" name="mainProducts" data="家纺类">家纺类</a>   
+									<a class="item w2" name="mainProducts" data="滕竹编">滕竹编</a>   
+									<a class="item w2" name="mainProducts" data="玻璃制品">玻璃制品</a>
+									<a class="item w2" name="mainProducts" data="一次性用品">一次性用品</a>   
+									<a class="item w2" name="mainProducts" data="不锈钢制品">不锈钢制品</a>   
+									<a class="item w2" name="mainProducts" data="皮革类制品">皮革类制品</a>																	
+								</div>
+							</div>							
+				    	</label>
+				    	
+						<label id="otherMainProductNode"> <span>其他产品(选填,多种产品请用逗号分隔)</span>
+					      <input placeholder="请输入您公司其他产品" type="text"  name="otherMainProduct" id="otherMainProduct" maxlength="50">
+				    	</label>				    	
+					</section>
+				</form>
+			</main>
+
+			<!--底部导航 开始-->
+			<footer>
+				<div class="order-tj">
+					<input type="button" id="btnNext" value="提交">
+				</div>
+			</footer>
+			<!--底部导航 结束-->
+			<%= require('html-loader!./layout/footer.html') %>
+	</body>
+</html>

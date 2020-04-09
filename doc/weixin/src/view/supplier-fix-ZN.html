@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+		<script language="JavaScript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	</head>
+
+	<body>
+		<!--导航栏-->
+		<header>
+			<a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+
+		<div class="section-common">
+			<form>
+				
+				<div class="form-group">
+					<!--<img src="images/tonguo.png" class="del" style="width: 45px;height:45px;">-->
+					<label style="width: 100%;">国内认证证书(<b id="homeImageUrlsText">已上传0张</b>)<b id="homeImageUrlsRet" class="del">通过</b></label>
+				</div>				
+<!--				<div class="add_pic1" id="uploadHome">
+					
+				</div>-->
+							
+<!--				<div class="pic_view1" id="homeImageUrlsView">
+					<img src="images/delete.png" class="del" style="width: 50px;height:50px;">
+					<div class="picitem"><img src="images/right_arrow_gray.png"></div>
+				</div>-->
+				
+				
+				<div class="add_pic1" id="homeImageUrlsUpd">								
+				</div>
+				<div class="pic_view1" id="homeImageUrlsView">
+					<img src="<%= require('../images/delete.png') %>" class="del" style="width: 50px;height:50px;" id="homeImageUrlsDel">
+					<!--<div class="picitem"><img src="images/right_arrow_gray.png"></div>-->
+				</div>				
+				
+
+				<div class="form-group">
+					<label style="width: 100%;">国际认证证书(<b id="homeImageUrlsText">已上传0张</b>)</label>
+				</div>
+<!--				<img src="images/delete.png" class="del" style="width: 32px;height:32px;">
+				<div class="add_pic1" id="uploadInternational">								
+				</div>-->
+				
+				<div class="add_pic1" id="internationalImageUrlsUpd">								
+				</div>
+				<div class="pic_view1" id="internationalImageUrlsView">	
+					<img src="<%= require('../images/delete.png') %>" class="del" style="width: 50px;height:50px;" id="internationalImageUrlsDel">
+				</div>				
+
+			</form>
+
+		</div>
+
+		<!--底部导航 开始-->
+		<footer>
+			<div class="order-tj">
+				<input type="button" id="btnSubmit" value="提交">
+			</div>
+		</footer>
+		<!--底部导航 结束-->
+		
+		<!--国内认证证书图片-->
+		<input type="hidden" id="homeImageUrlsStatus" value="" />
+		<!--国际认证证书图片-->
+		<input type="hidden" id="internationalImageUrlsStatus" value="" />
+		
+		<!--国内认证证书图片-->
+		<input type="hidden" id="homeImageUrlsCnt" value="" />
+		<!--国际认证证书图片-->
+		<input type="hidden" id="internationalImageUrlsCnt" value="" />
+		
+		<!--国内认证证书图片-->
+		<input type="hidden" id="homeImageUrls" value="" />
+		<!--国际认证证书图片-->
+		<input type="hidden" id="internationalImageUrls" value="" />
+			
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+
+</html>

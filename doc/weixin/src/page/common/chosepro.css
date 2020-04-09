@@ -1,0 +1,53 @@
+/* CSS Document */
+/****************************
+
+*           选择商品        *
+
+***************************/
+/*发布*/
+header a.release {
+	width: 3rem;
+	text-align: center;
+	line-height: 2.15rem;
+	background: none;
+	font-size: 0.6rem;
+	position: absolute;
+	right: 0;
+	left: auto;
+}
+.product_list .form-group {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.product_list .form-group input[type=radio] {
+	display: none;
+}
+.product_list .form-group input[type=radio] + label { 
+	display: block;
+	height: 100%;
+	width: 100%;
+	background: url(../../images/symbols-button-pick1.png) no-repeat top right;
+	background-size: 1.8rem;
+}
+.product_list .form-group input[type=radio]:checked + label {
+	background: url(../../images/symbols-button-picked1.png) no-repeat top right;
+	background-size: 1.8rem;
+}
+
+.product_list .form-group input[type=checkbox] {
+	display: none;
+}
+.product_list .form-group input[type=checkbox] + label { 
+	display: block;
+	height: 100%;
+	width: 100%;
+	background: url(../../images/symbols-button-pick1.png) no-repeat top right;
+	background-size: 1.8rem;
+}
+.product_list .form-group input[type=checkbox]:checked + label {
+	background: url(../../images/symbols-button-picked1.png) no-repeat top right;
+	background-size: 1.8rem;
+}

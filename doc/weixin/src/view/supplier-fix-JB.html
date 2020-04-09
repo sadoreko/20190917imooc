@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>
+
+	<body>
+
+		<header>
+			<a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+
+		<div class="section-common">
+			<form>
+				<div class="form-group" >
+					<label style="width: 100%;">公司性质(点击选中)</label>
+				</div>
+				<div class="form-group" >
+					<div class="product-tag" style="width: 100%;">
+						<div class="tag-list" >
+							<a class="item w1" name="orgType" data="个体户">个体户</a>
+							<a class="item w1" name="orgType" data="民营">民营</a>
+							<a class="item w1" name="orgType" data="国营">国营</a>
+							<a class="item w1" name="orgType" data="合资">合资</a>																
+						</div>
+					</div>					
+				</div>
+
+				<!--其他公司性质-->
+				<div class="form-group">
+					<label>其他性质</label>
+					<input placeholder="请输入其他公司性质" type="text" tabindex="2" name="otherOrgType" id="otherOrgType">
+				</div>
+				
+				<!--成立时间-->
+				<div class="form-group">
+					<label>成立时间</label>
+					<input placeholder="请选择时间" type="text" tabindex="2" name="startDate" id="startDate">
+				</div>
+
+				<!--成立时间-->
+				<div class="form-group">
+					<label>注册资本</label>
+					<input placeholder="请输入注册资本" type="text" tabindex="3" name="registerMoney" id="registerMoney" style="text-align: right;"><label>万元</label>
+				</div>
+
+				<div class="form-group">
+					<label>营业资格</label>
+					<input placeholder="请输入统一社会信用代码" type="text" tabindex="4" name="orgCode" id="orgCode">
+				</div>
+
+				<div class="form-group">
+					<label>经营范围</label>
+					<textarea placeholder="请输入经营范围" name="managementScope" id="managementScope" maxlength="500" tabindex="5" style="height: 190px;"></textarea>
+				</div>
+
+				<!--营业执照-->
+<!--				<div class="setbar">
+					<a href="upLoadLen.html">
+						<p>营业执照<span id="uploadStatus">未上传</span></p>
+					</a>
+				</div>
+-->
+			</form>
+
+		</div>
+
+		<!--底部导航 开始-->
+		<footer>
+			<div class="order-tj">
+				<input type="button" id="btnSubmit" value="提交">
+			</div>
+		</footer>
+		<!--底部导航 结束-->
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+	
+
+</html>

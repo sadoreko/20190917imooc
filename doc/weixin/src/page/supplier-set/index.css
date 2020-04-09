@@ -1,0 +1,187 @@
+/* CSS Document */
+/********************************
+
+*            个人设置            *
+
+*******************************/
+
+.setbar {
+	width: 100%;
+	height: 2.2rem;
+	background: #fff;
+	border-bottom: 1px #eee solid;
+	line-height: 2.2rem;
+	padding: 0 0.3rem 0 0.8rem;
+	position: relative;
+}
+.setbar p {
+	font-size: 0.7rem;
+	color: #333;
+	position: relative;
+}
+.setbar p span {
+	font-size: 0.6rem;
+	color: #B19E76;
+	float: right;
+	padding-right: 0.45rem;
+}
+.setbar p.setbar_radio span {
+	font-size: 0.6rem;
+	color: #999;
+	float: none;
+}
+.setbar a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../../images/symbols-more2.png) no-repeat center right;
+	background-size: 1.5rem;
+}
+.setbar a p span {
+	padding-right: 1.35rem;
+}
+.setbar a div.user_head {
+	width: 1.6rem;
+	height: 1.6rem;
+	position: absolute;
+	right: 2rem;
+	top: 50%;
+	transform: translateY(-50%);
+	overflow: hidden;
+	border-radius: 50%;
+}
+.setbar a div.user_head img {
+	width: 1.6rem;
+}
+.setbar a ~ input[type=file] {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.setbar .form-group {
+	height: 2.2rem;
+	padding: 0.35rem 0;
+	position: absolute;
+	right: 0.65rem;
+	top: 0;
+}
+.setbar .form-group input[type=checkbox] {
+	display: none;
+}
+.setbar .form-group input[type=checkbox]:checked +label {
+	background: url(../../images/symbols-dianji.png) no-repeat center;
+	background-size: 3rem auto;
+	transition: all .5s;
+}
+.setbar .form-group label {
+	display: block;
+	height: 1.5rem;
+	width: 3rem;
+	background: url(../../images/symbols-dianjihui.png) no-repeat center;
+	background-size: 3rem auto;
+	transition: all .5s;
+	position: relative;
+}
+.setbar .form-group input[type=checkbox]:checked +label span {
+	/* background: url(../../images/symbols-dianji-open.png) no-repeat center; */
+	background-size: 1.2rem;
+	position: absolute;
+	top: 0.15rem;
+	right: 0.05rem;
+	left: auto;
+}
+.setbar .form-group label span {
+	display: block;
+	height: 1.2rem;
+	width: 1.2rem;
+	border-radius: 0.75rem;
+	box-shadow: 0.2rem 0.15rem 0.25rem 0 rgba(0,0,0,0.13);
+	/* background: url(../../images/symbols-dianjihui-close.png) no-repeat center; */
+	background-size: 1.2rem;
+	position: absolute;
+	top: 0.15rem;
+	left: 0.05rem;
+}
+.btn.logout_btn {
+	margin: 0.3rem auto 0;
+	width: 100%;
+	border-radius: 0;
+	background: #fff;
+	font-size: 0.9rem;
+	height: 2.5rem;
+	color: #BA272C;
+}
+/*修改头像弹窗*/
+.changehead_popup {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: none;
+	z-index: -1;
+	visibility: hidden;
+}
+.changehead_popup a {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.changehead_popup ul {
+	width: 100%;
+	padding: 0 1.55rem 2.6rem;
+	position: absolute;
+	bottom: -11.15rem;
+	left: 0;
+	z-index: 3
+}
+.changehead_popup ul li {
+	background: #fff;
+	line-height: 2.5rem;
+	font-size: 0.7rem;
+	color: #333;
+	border-top: 1px solid #eee;
+	padding-left: 2.1rem;
+}
+.changehead_popup ul li:nth-child(1) {
+	border-radius: 0.25rem 0.25rem 0 0;
+	line-height: 3.55rem;
+	text-align: center;
+	padding: 0;
+}
+.changehead_popup ul li:nth-child(3) {
+	border-radius: 0 0 0.25rem 0.25rem;
+}
+/*点击关闭包含举报，关注，取消按钮的弹窗 500*/
+.changehead_popup_setTimeout_hid ul {
+	display: hiden;
+}
+.changehead_popup_hid {
+	background: none;
+	transition: all 0.5s;
+	visibility: hidden;
+}
+.changehead_popup_hid ul {
+	bottom: -11.15rem;
+	transition: all 0.4s;
+}
+/*点击 operate 弹出举报，关注，取消按钮弹窗 10*/
+.changehead_popup_show ul {
+	display: block;
+}
+.changehead_popup_setTimeout_show {
+	background: rgba(0 ,0,0,0.3);
+	transition: all 0.5s;
+	z-index: 999;
+	visibility: visible;
+}
+.changehead_popup_setTimeout_show ul {
+	bottom: 0rem;
+	transition: all 0.4s;
+}

@@ -1,0 +1,114 @@
+/* ---------- modelcommon.css里的 ---------- */
+@charset "utf-8";
+* { margin:0; padding:0; }
+body { background:#f3f3f3; }
+* { margin:0; padding:0; -webkit-tap-highlight-color:rgba(0, 0, 0, 0); -webkit-text-size-adjust:100%; -webkit-user-select:none; font-weight:normal; font-style:normal; box-sizing:border-box; -webkit-box-sizing:border-box; /* Safari */ -moz-box-sizing:border-box; /* Firefox */ -ms-text-size-adjust: 100%; -ms-user-select:none; user-select:none; -webkit-overflow-scrolling: touch; }
+::-webkit-search-cancel-button {
+display: none;
+}
+html { font:0.7rem/1.25'΢���ź�', Arial, sans-serif; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; }
+body, p, form, input, button, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6 { margin:0; padding:0; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; }
+textarea { resize:none; }
+table { border-collapse:collapse; }
+input, select, textarea { outline:none; border-radius:0; border:none; background:none; font-size:0.7rem; -webkit-user-select:text; -ms-user-select:text; user-select:text; }
+input[type=submit], input[type=reset], input[type=button], input[type=text] { -webkit-appearance:none; }
+a { text-decoration:none; -WebKit-touch-callout:none; outline:0; cursor:pointer; color:#777; }
+em, i { font-style:normal; }
+li, ol { list-style:none; }
+.clearfix { *zoom:1;
+}
+.clearfix:after { display:block; overflow:hidden; clear:both; height:0; visibility:hidden; content:"."; }
+body { margin:0 auto; width:100%; color:#666666; font-size:0.7rem; 
+  /* background: url(../img/login-bg.jpg) no-repeat; 没有这个图片  */
+  background-size:100%; 
+  overflow: hidden; }
+html, body { position: relative; height: 100% }
+img { border:none; vertical-align:top; }
+::-webkit-scrollbar {
+width:0;
+height: 0;
+}
+::-webkit-scrollbar-track {
+background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+background-color: transparent;
+}
+::-webkit-scrollbar-button {
+background-color: transparent;
+}
+::-webkit-scrollbar-corner {
+background-color: transparent;
+}
+.clear, .clear2, .clear3, .clear4 { clear:both; font-size:0.025rem; height:0.25rem; }
+.clear2 { height:0.0rem; }
+.clear3 { height:2.25rem; }
+.clear4 { background:#efeff4; }
+.clear5 { background:#efeff4;  clear:both; font-size:0.025rem; height:0.5rem;}
+.cleart { height:2.2rem; }
+.line { background:#efeff4;  height:0.025rem; font-size:0.025rem;}
+
+/*导航栏样式*/
+header {
+	width: 100%;
+	height: 2.15rem;
+	background: #fff;
+	border-bottom: 1px #eee solid;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+header p {
+	font-size: 0.8rem;
+	color: #333333;
+	text-align: center;
+	line-height: 2.15rem;
+}
+header a {
+	display: block;
+	width: 1.85rem;
+	height: 2.15rem;
+	background: url(../../images/symbols-fanhui.png) no-repeat center right;
+	background-size: 1.5rem;
+	color: #666;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header a.release {
+	width: 3rem;
+	text-align: center;
+	line-height: 2.15rem;
+	background: none;
+	font-size: 0.6rem;
+	position: absolute;
+	right: 0;
+	left: auto;
+	color: #333;
+}
+
+/* ---------- modelcommon.css里的 END ---------- */
+
+/* ---------- supplier-model.html自己的 ---------- */
+progress {
+  width: 168px;
+  height: 5px;
+  color: #f00;
+  background: #EFEFF4;
+  border-radius: 0.1rem;
+  margin-left: 0.5rem;
+}
+/* 表示总长度背景色 */
+
+progress::-webkit-progress-bar {
+  background-color: #f2f2f2;
+  border-radius: 0.2rem;
+}
+/* 表示已完成进度背景色 */
+
+progress::-webkit-progress-value {
+  background: #a21211;
+  border-radius: 0.2rem;
+}

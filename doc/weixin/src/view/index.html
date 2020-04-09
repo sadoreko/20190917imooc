@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="menu">
+        <p class="menuBtn"></p>
+      </div>
+      <div class="logo">
+        <img src="<%= require('../images/logo.png') %>" alt="logo.png" >
+      </div>
+      <p class="logo-text">湖南出口产业屈聚集区，汇集湖南14个地区的出口产品生产企业。</p>
+      <div class="logo-btn">
+        <p>注册入驻，加入我们</p>
+      </div>
+    </section>
+
+    <div class="identity">
+      <a class="id-item supplier" href="./switch-register.html">供应商<br><span>Supplier Sign up</span></a>
+      <a class="id-item buyer" href="./region.html">采购商<br><span>Buyer Sign up</span></a>
+    </div>
+
+    <div class="contentWrap">
+
+      <div class="contentHead clear">
+        <span class="title">推荐阅读</span>
+        <span style="float: right;">
+          <a href="./newsMore.html" class="contentMore">更多&gt;&gt;</a>
+        </span>
+      </div>
+
+      <div class="contentBody" id="contentBody"></div>
+
+    </div>
+  </main>
+  <%= require('html-loader!./layout/footer.html') %> 
+  <!--   <script src="./js/common.js"></script> -->
+</body>
+</html>

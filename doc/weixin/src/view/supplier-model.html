@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>
+
+	<body class="bg">
+
+		<!--导航栏-->
+		<header>
+			<a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+		
+		<div class="main">
+			<div class="content">
+				<div class="ewm">
+					<canvas id="canvas" height="300" width="300"></canvas>
+					<p style="font-size: 1.5rem;" id="scoreTotal"></p>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="content">
+				<ul class="da-list">
+					<li class="JB">
+						<p>基本信息</p>
+						<div class="clear"></div>
+						<p id="scoreJB">0</p>
+					</li>
+					<li class="JY">
+						<p>外贸经验</p>
+						<div class="clear"></div>
+						<p id="scoreJY">0</p>
+					</li>
+					<li class="GH">
+						<p>供货能力</p>
+						<div class="clear"></div>
+						<p id="scoreGH">0</p>
+					</li>
+				</ul>
+				<ul class="da-list">
+					<li class="ZN">
+						<p>质量认证</p>
+						<div class="clear"></div>
+						<p id="scoreZN">0</p>
+					</li>
+					<li class="PL">
+						<p>生产场所</p>
+						<div class="clear"></div>
+						<p id="scorePL">0</p>
+					</li>
+					<li class="RY">
+						<p>人员状况</p>
+						<div class="clear"></div>
+						<p id="scoreRY">0</p>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+			<!--			<div class="clear4"></div>-->
+
+			<div class="clear4"></div>
+			<div class="content">
+				<ul class="nav-wo">
+					<!--					<li>
+						<img src="<%= require('../images/1-icon2.png') %>" class="naicon" /><span>基本信息</span>
+						资料完整度
+					</li>
+					<div class="clear2"></div>-->
+					<li class="JB">
+						<img src="<%= require('../images/1-icon2.png') %>" class="naicon" /><span>基本信息</span>
+						<progress  max="100" id="percentJB"></progress>
+						<B id="percentTextJB">90%</B>
+						<img id="goJB" src="<%= require('../images/1-icon-next.png') %>" class="nanext" />
+					</li>
+					<div class="clear2"></div>
+					
+					<li class="JY">
+						<img src="<%= require('../images/1-icon3.png') %>" class="naicon" /><span>外贸经验</span>
+						<progress value="60" max="100" id="percentJY"></progress>
+						<B id="percentTextJY">60%</B>
+						<img id="goJY" src="<%= require('../images/1-icon-next.png') %>" class="nanext" /></li>
+					<div class="clear2"></div>
+					
+					<li class="GH">
+						<img src="<%= require('../images/1-icon7.png') %>" class="naicon" /><span>供货能力</span>
+						<progress value="0" max="100" id="percentGH"></progress>
+						<B id="percentTextGH">0%</B>
+						<img id="goGH" src="<%= require('../images/1-icon-next.png') %>" class="nanext" /></li>
+					<div class="clear2"></div>
+					
+					<li class="ZN">
+						<img src="<%= require('../images/1-icon4.png') %>" class="naicon" /><span>质量认证</span>
+						<progress value="40" max="100" id="percentZN"></progress>
+						<B id="percentTextZN">40%</B>
+						<img id="goZN" src="<%= require('../images/1-icon-next.png') %>" class="nanext" /></li>
+					<div class="clear2"></div>
+					
+					<li class="PL">
+						<img src="<%= require('../images/1-icon5.png') %>" class="naicon" /><span>生产场所</span>
+						<progress value="40" max="100" id="percentPL"></progress>
+						<B id="percentTextPL">40%</B>
+						<img id="goPL" src="<%= require('../images/1-icon-next.png') %>" class="nanext" /></li>
+					<div class="clear2"></div>
+					
+					<li class="RY">
+						<img src="<%= require('../images/1-icon6.png') %>" class="naicon" /><span>人员情况</span>
+						<progress value="40" max="100" id="percentRY"></progress>
+						<B id="percentTextRY">40%</B>
+						<img id="goRY" src="<%= require('../images/1-icon-next.png') %>" class="nanext" /></li>
+					<div class="clear2"></div>
+				</ul>
+			</div>
+		</div>
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+</html>

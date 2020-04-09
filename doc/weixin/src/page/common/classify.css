@@ -1,0 +1,146 @@
+/* CSS Document */
+/****************************
+
+*           分类         *
+
+***************************/
+/*section*/
+.section-classify {
+	padding: 2.9rem 0 2.5rem;
+}
+/*搜索框*/
+.classify {
+	width: 100%;
+	padding: 0.7rem 1.5rem;
+	background: #fff;
+	border-radius: 1px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #eee;
+}
+.classify a {
+	display: block;
+	width: 100%;
+	height: 1.5rem;
+	box-shadow: 0 0.1rem 0.2rem 0 rgba(245,245,245,0.50);
+	border-radius: 0.2rem;
+	background: #F4F4F4 url(../../images/symbols-search_icon_gray.png) no-repeat center left;
+	background-size: 1.5rem;
+	padding-left: 1.85rem;
+	font-size: 0.6rem;
+	color: #CBCBCB;
+	line-height: 1.5rem;
+}
+/*分类主体*/
+.classify_main {
+	height: calc(100vh - 5.4rem);
+	width: 100%;
+	background: #fff;
+}
+/*分类菜单*/
+.classify_main .classify_menu {
+	width: 4rem;
+	height: 100%;
+	overflow: auto;
+	float: left;
+	border-right: 1px solid #eee;
+}
+.classify_main .classify_menu ul {
+	width: 100%;
+	padding-left: 0.3rem;
+}
+.classify_main .classify_menu ul li {
+	width: 100%;
+	padding: 0.1rem 0;
+}
+.classify_main .classify_menu ul li a {
+	display: block;
+	width: 100%;
+	height: 1.2rem;
+	line-height: 1.2rem;
+	font-size: 0.7rem;
+	color: #666;
+	text-align: center;
+}
+.classify_main .classify_menu ul li.active a {
+	color: #0097FD;
+	border-left: 2px solid #0097FD;
+}
+/*分类产品*/
+.classify_main .classify_pro {
+	width: calc(100vw - 4rem);
+	height: calc(100vh - 5.4rem);
+	float: left;
+	padding: 0.5rem 0.65rem 0;
+	overflow: auto;
+}
+/*banner*/
+.classify_main .classify_pro .classify_banner {
+	width: 100%;
+	height: 5rem;
+	overflow: hidden;
+}
+.classify_main .classify_pro .classify_banner img {
+	width: 100%;
+}
+/*分区文字*/
+.classify_pro p.title {
+	width: 100%;
+	text-align: center;
+	font-size: 0.6rem;
+	color: #999;
+	line-height: 0.85rem;
+	padding: 0.5rem 0 0.7rem;
+}
+/*产品列表*/
+.classify_pro .classify_pro_list {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.classify_pro .classify_pro_list .pro {
+	width: 33.333333333%;
+}
+.classify_pro .classify_pro_list .pro .pro_img {
+	width: 4rem;
+	height: 4rem;
+	/*	background: #fafafa;*/
+	margin: 0 auto;
+}
+.classify_pro .classify_pro_list .pro .pro_img img {
+	width: 100%;
+}
+.classify_pro .classify_pro_list .pro p {
+	font-size: 0.6rem;
+	color: #666;
+	text-align: center;
+	padding: 0.4rem 0 0.5rem;
+}
+
+.order-tj {
+	background: #fff;
+	height: 2.45rem;
+	text-align: right;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.order-tj input {
+	border: 0;
+	background: #45a4fd;
+	color: #fff;
+	height: 2.45rem;
+	width: 5rem;
+	font-size: 0.7rem;
+}
+
+.nospanChecked{
+display: block;border: 1px solid #CCCCCC;	
+}
+
+.spanChecked{
+display: block;border: 1px solid #00BBD3;	
+}

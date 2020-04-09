@@ -1,0 +1,210 @@
+/* CSS Document */
+/****************************
+
+*           登录注册        *
+
+***************************/
+.fr-top{ height:7.375rem; width:100%; background:url(../../images/bg.jpg) no-repeat; background-size:100% 7.375rem;}
+.fr-top h4{ font-size:1rem; color:#fff; padding:1.8rem 0 0 2.2rem;}
+.fr-top p{ font-size:0.6rem;color:#fff; padding:0.25rem 0 0 2.2rem;}
+
+.bordernone {
+	border: none;
+}
+.login {
+	width: 100%;
+	padding: 0 2.8rem;
+	background: #fffefe;
+}
+.login .user_head {
+  width: 4rem;
+  margin: 1rem auto 0;
+  padding: 0.5rem;
+}
+.login .user_head img {
+	width: 100%;
+}
+.login p.jihuo {
+	font-size: 0.7rem;
+	color: #333333;
+	line-height: 1rem;
+	text-align: center;
+	margin-bottom: 0.45rem;
+}
+.login p.jihuo_prompt {
+	font-size: 0.7rem;
+	color: #45a4fd;
+	line-height: 1rem;
+	text-align: center;
+	margin-bottom: 2.55rem;
+}
+.login p.jihuo_prompt1 {
+	font-size: 0.7rem;
+	color: #333;
+	line-height: 1.1rem;
+	text-align: center;
+	margin-bottom: 0.65rem;
+}
+.login p.invitation_code_prompt {
+	font-size: 0.6rem;
+	color: #333;
+	line-height: 0.85rem;
+	text-align: right;
+	margin-top: 0.35rem;
+}
+.login .form-group {
+	width: 100%;
+	height: 2.4rem;
+	display: flex;
+	border-bottom: 1px solid #eee;
+}
+.login .form-group.invitation_code {
+	padding-top: 1.45rem;
+	height: 3.85rem;
+}
+.login .form-group input {
+	width: 100%;
+	height: 2.4rem;
+	border: none;
+	font-size: 0.8rem;
+	color: #333;
+	flex: 1;
+	background: none;
+}
+ .login .form-group input::-webkit-input-placeholder {
+color: #333;
+}
+.login .form-group button {
+	height: 1.8rem;
+	padding: 0 0.55rem;
+	border: 0.05rem solid #B19E76;
+	border-radius: 0.2rem;
+	font-size: 0.7rem;
+	color: #666666;
+	margin-top: 0.3rem;
+}
+.login .form-group.checkbox {
+	border: none;
+	padding: 0.8rem 0;
+	height: auto;
+}
+.login .form-group.checkbox input[type=checkbox] {
+	display: none;
+}
+.login .form-group.checkbox input[type=checkbox] + label {
+	display: block;
+	width: 100%;
+	font-size: 0.6rem;
+	color: #666666;
+	line-height: 0.85rem;
+	padding-left: 1.45rem;
+	background: url(../../images/symbols-button-pick.png) no-repeat center left;
+	background-size: 0.9rem;
+}
+.login .form-group.checkbox input[type=checkbox]:checked + label {
+	background: url(../../images/log_checkbox.png) no-repeat center left;
+	background-size: 0.9rem;
+}
+
+.login .form-group.radio {
+	border: none;
+	padding: 0.8rem 0;
+	height: auto;
+}
+.login .form-group.radio input[type=radio] {
+	display: none;
+}
+.login .form-group.radio input[type=radio] + label {
+	display: block;
+	width: 100%;
+	font-size: 0.6rem;
+	color: #666666;
+	line-height: 0.85rem;
+	padding-left: 1.45rem;
+	background: url(../../images/symbols-button-pick.png) no-repeat center left;
+	background-size: 0.9rem;
+}
+.login .form-group.radio input[type=radio]:checked + label {
+	background: url(../../images/log_checkbox.png) no-repeat center left;
+	background-size: 0.9rem;
+}
+
+.log_btn {
+	width: 100%;
+	height: 2rem;
+	margin: 2rem 0;
+}
+.log_btn .btn {
+	width: 100%;
+	height: 100%;
+	/*background: #B19E76;*/
+	background:#45a4fd; border:0; color:#fff;
+	border-radius: 0.1rem;
+}
+.sign_btn {
+	width: 100%;
+	height: 2rem;
+	margin-top: 0.35rem;
+}
+.sign_btn .btn {
+	width: 100%;
+	height: 100%;
+	background: #B19E76;
+	border-radius: 0.1rem;
+}
+.binding_btn {
+	width: 100%;
+	height: 2rem;
+	margin-top: 2.15rem;
+}
+.binding_btn .btn {
+	width: 100%;
+	height: 100%;
+	background: #B19E76;
+	border-radius: 0.1rem;
+}
+.log_phone_btn {
+	width: 100%;
+	height: 2rem;
+	margin-bottom: 1rem;
+}
+.log_phone_btn .btn {
+	width: 100%;
+	height: 100%;
+	background: #B19E76;
+	border-radius: 0.1rem;
+}
+.log_wechat_btn {
+	width: 100%;
+	height: 2rem;
+	margin-bottom: 2.6rem;
+}
+.log_wechat_btn .btn {
+	width: 100%;
+	height: 100%;
+	background: none;
+	border:1px solid #B19E76;
+	border-radius: 0.1rem;
+	color: #B19E76;
+}
+.sign_link {
+	display: block;
+	text-align: center;
+	font-size: 0.7rem;
+	color: #B29234;
+}
+
+.titleBg {
+	background: url(../../images/titlebg2.png) no-repeat;
+	background-size:100%;
+	height:1rem;
+	display: block;
+}
+
+.titleAppend {
+	background: url(../../images/titleappend.png) no-repeat center left;
+	background-size: 1.9rem;
+	text-align: center;
+	width: 100%;
+	
+}

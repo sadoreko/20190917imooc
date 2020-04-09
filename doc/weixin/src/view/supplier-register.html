@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+		<script language="JavaScript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<!--头部 开始-->
+			<!--导航栏-->
+			<header class="fr-top">
+				<h4 id="frmTitle">
+					国际采购湖南第一站<br>轻松做出口，马上入驻！</h4>
+			</header>
+
+			<main>
+				<form class="biaodan">
+					<!--基本概况 开始-->
+					<section id="step1">
+						<label> <span><b>*</b>公司名称</span>
+					      <input placeholder="请输入公司名称" type="text" tabindex="1" name="orgNameZh" id="orgNameZh" maxlength="60">
+					      <span style="color: red;display: none;" id="errMsgOrgNameZh">请输入公司名称!  </span>
+				    	</label>
+						<label> <span><b>*</b>邮箱地址<br>(邮箱将作为登录账户使用，请牢记！)</span>
+					      <input placeholder="请输入邮箱地址" type="email" tabindex="2" name="loginAccount" id="loginAccount" maxlength="60">
+					      <span style="color: red;display: none;" id="errMsgEmail">请输入邮箱地址!</span>	
+					      <span style="color: red;display: none;" id="errMsgEmailFormat">请输入正确的邮箱地址格式!</span>						      
+				    	</label>
+						<label> <span><b>*</b>登录密码<br>(在登录微信公众号和管理后台时使用，请牢记！)</span>
+					      <input placeholder="请输入登录密码" type="password" tabindex="3" name="loginPassword" id="loginPassword" maxlength="60">
+					      <span style="color: red;display: none;" id="errMsgLoginPassword">请输入登录密码!  </span>
+				    	</label>
+						<label> <span><b>*</b>公司法人</span>
+					      <input placeholder="请输入公司法人" type="text" tabindex="4" name="corporation" id="corporation" maxlength="50">
+					      <span style="color: red;display: none;" id="errMsgCorporation">请输入公司法人!  </span>
+				    	</label>
+						<label> <span><b>*</b>联系人姓名</span>
+					      <input placeholder="请输入联系人姓名" type="text" tabindex="5" name="contact" id="contact" maxlength="50">
+					      <span style="color: red;display: none;" id="errMsgContact">请输入联系人姓名!  </span>
+				    	</label>
+						<label> <span><b>*</b>联系人电话</span>
+					      <input placeholder="请输入联系人电话" type="text" tabindex="6" name="contactTel" id="contactTel" maxlength="50">
+					      <span style="color: red;display: none;" id="errMsgContactTel">请输入联系人电话!  </span>
+				    	</label>
+
+						<label> <span><b>*</b>公司地址</span>
+<!--					      <input placeholder="请选择所在地址" type="text" tabindex="5" name="picker" id="picker" class="sg-area-result" readonly="readonly">
+					      <img src="images/right_arrow_gray.png" class="add" id="selectBtn"> -->
+								<!-- <input type="text" class="cell-input" readonly id="picker" placeholder="请选择所在地址" tabindex="7"> -->
+								<!-- 目前把readonly去掉了 -->
+								<input type="text" class="cell-input" id="picker" placeholder="请选择所在地址" tabindex="7">
+					      <img src="<%= require('../images/icon_more_black.png') %>" alt="" class="add" style="width: 23px;height: 23px;" id="selectBtn">	
+					      <span style="color: red;display: none;" id="errMsgAddress">请选择公司所在地址!  </span>		      
+				    	</label>
+						<textarea placeholder="请输入详细地址" name="police" id="police" maxlength="500" tabindex="8" style="height: 30px;"></textarea>
+						<span style="color: red;display: none;" id="errMsgPolice">请输入详细地址!  </span>
+
+						<label> <span><b>*</b>请选择公司的主要产品(点击选中) <b style="color: red;display: none;" id="errMsgMainProducts">至少选择一项或输入其他产品!  </b></span>
+							<ul class="dowebok">
+								<li><input type="checkbox" name="mainProducts"  value="陶瓷"    data-labelauty="陶瓷"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="假发"    data-labelauty="假发"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="湘绣"    data-labelauty="湘绣"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="服装"    data-labelauty="服装"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="鞋类"    data-labelauty="鞋类"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="箱包"    data-labelauty="箱包"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="茶叶"    data-labelauty="茶叶"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="玩具"    data-labelauty="玩具"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="日用百货"    data-labelauty="日用百货"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="日化用品"    data-labelauty="日化用品"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="家居用品"    data-labelauty="家居用品"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="小五金"  data-labelauty="小五金"></li>   
+								<li><input type="checkbox" name="mainProducts"  value="小家电"  data-labelauty="小家电"></li>   
+								<li><input type="checkbox" name="mainProducts"  value="仿真花"  data-labelauty="仿真花"></li>   
+								<li><input type="checkbox" name="mainProducts"  value="家纺类"  data-labelauty="家纺类"></li>   
+								<li><input type="checkbox" name="mainProducts"  value="滕竹编"  data-labelauty="滕竹编"></li>   
+								<li><input type="checkbox" name="mainProducts"  value="玻璃制品"    data-labelauty="玻璃制品"></li> 
+								<li><input type="checkbox" name="mainProducts"  value="一次性用品"  data-labelauty="一次性用品"></li>   
+								<li><input type="checkbox" name="mainProducts"  value="不锈钢制品"  data-labelauty="不锈钢制品"></li>   
+								<li><input type="checkbox" name="mainProducts"  value="皮革类制品"  data-labelauty="皮革类制品"></li>   
+								<!--<li><input type="checkbox" name="mainProducts"  value="其他" data-labelauty="其他"></li>--> 
+							</ul>						    
+				    	</label>
+				    	
+						<label id="otherMainProductNode"> <span>其他产品(选填,多种产品请用逗号分隔)</span>
+					      <input placeholder="请输入您公司其他产品" type="text"  name="otherMainProduct" id="otherMainProduct" maxlength="50">
+				    	</label>				    	
+					</section>
+
+					<!--企业认证 开始-->
+					<section id="step2">
+						<label><span>公司性质</span> 
+							<ul class="dowebok">
+								<li><input type="radio" name="orgType" data-labelauty="民营" value="民营" checked="checked"></li>
+								<li><input type="radio" name="orgType" data-labelauty="国营" value="国营" ></li>
+								<li><input type="radio" name="orgType" data-labelauty="合资" value="合资" ></li>
+								<!--<li><input type="radio" name="orgType" data-labelauty="其他" value="其他"></li>-->
+							</ul>		
+						</label>
+						
+						<label><span>其他公司性质(以上性质均不是时)</span> 
+							<input placeholder="请输入其他公司性质" type="text"  tabindex="8" name="otherOrgType" id="otherOrgType" maxlength="50">
+							<span style="color: red;display: none;" id="errMsgOtherOrgType">请输入其他公司性质!  </span>	
+						</label>
+						
+						<label><span>公司成立时间</span> 
+							<input placeholder="请选择时间" type="text"  name="startDate" id="startDate" readonly="readonly" tabindex="9">
+						</label>
+						<label><span>注册资本(万元)</span> 
+							<input placeholder="注册资本" type="text"  name="registerMoney" id="registerMoney" tabindex="10">
+						</label>
+
+						<label><span>统一社会信用代码</span> 
+							<input placeholder="统一社会信用代码" type="text"  name="orgCode" id="orgCode" tabindex="11">
+						</label>
+
+						<label><span>请上传营业执照 <b id="licenseImageUrlText">已上传0张</b></span>
+							<img src="<%= require('../images/delete.png') %>" class="del" style="width: 23px;height: 23px;" id="licenseImageUrlDel">
+							<div class="add_pic" id="licenseImageUrlUpd">								
+							</div>
+							<div class="pic_view" id="licenseImageUrlView">
+								<!--<img src="images/mpImg01.png" class="sigleitem">-->
+							</div>							
+						</label>
+					</section>
+					<!--企业认证 结束-->
+
+					<!--外贸状况 开始-->
+					<section id="step3">
+						<label><span>有无外贸经验</span> 
+							<ul class="dowebok">
+								<li><input type="radio" name="isForeignTrade" data-labelauty="有经验" value="有经验"></li>
+								<li><input type="radio" name="isForeignTrade" data-labelauty="无经验" value="无经验" checked="checked"></li>
+							</ul>
+						</label>
+						
+						<label>
+							<span>有无出口业务团队</span> 
+							<ul class="dowebok">
+								<li><input type="radio" name="isForeignTradeTeam" data-labelauty="有" value="有"></li>
+								<li><input type="radio" name="isForeignTradeTeam" data-labelauty="无" value="无" checked="checked"></li>
+							</ul>
+						</label>
+						
+						<label>
+							<span>出口方式</span> 
+							<ul class="dowebok">
+								<li><input type="checkbox" name="exportMode" data-labelauty="一般贸易" value="一般贸易"></li>
+								<li><input type="checkbox" name="exportMode" data-labelauty="代理公司" value="代理公司" ></li>
+								<li><input type="checkbox" name="exportMode" data-labelauty="贸易公司" value="贸易公司"></li>
+								<!--<li><input type="checkbox" name="exportMode" data-labelauty="其他" value="其他" ></li>	-->							
+							</ul>								
+						</label>
+
+						<label id="otherExportModeNode"><span>其他出口方式(选填)</span> 
+							<input placeholder="请输入出口方式" type="text"  name="otherExportMode" id="otherExportMode">
+						</label>
+						
+						<label>
+							<span>年出口额(人民币 单位:万元)</span> 
+							<input placeholder="年出口额" type="text"  name="rmbExportVolume" id="rmbExportVolume" tabindex="12">
+						</label>
+						
+						<label>
+							<span>年出口额(美元 单位:万元)</span> 
+							<input placeholder="年出口额" type="text"  name="dollarExportVolume" id="dollarExportVolume" tabindex="13">								
+						</label>
+
+						<label> <span>出口国家(多个国家请用逗号分隔)</span>
+<!--							<select id="exportCountries" class="selectpicker" multiple data-live-search="true" data-actions-box="true">
+						    </select>-->
+							<input placeholder="出口国家" type="text"  name="exportCountries" id="exportCountries" maxlength="50" tabindex="14">						   
+				    	</label>
+
+						<label> <span>出口产品(点击选中)</span>
+							<ul class="dowebok">
+								<li><input type="checkbox" name="exportProducts"  value="陶瓷"    data-labelauty="陶瓷"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="假发"    data-labelauty="假发"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="湘绣"    data-labelauty="湘绣"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="服装"    data-labelauty="服装"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="鞋类"    data-labelauty="鞋类"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="箱包"    data-labelauty="箱包"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="茶叶"    data-labelauty="茶叶"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="玩具"    data-labelauty="玩具"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="日用百货"    data-labelauty="日用百货"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="日化用品"    data-labelauty="日化用品"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="家居用品"    data-labelauty="家居用品"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="小五金"  data-labelauty="小五金"></li>   
+								<li><input type="checkbox" name="exportProducts"  value="小家电"  data-labelauty="小家电"></li>   
+								<li><input type="checkbox" name="exportProducts"  value="仿真花"  data-labelauty="仿真花"></li>   
+								<li><input type="checkbox" name="exportProducts"  value="家纺类"  data-labelauty="家纺类"></li>   
+								<li><input type="checkbox" name="exportProducts"  value="滕竹编"  data-labelauty="滕竹编"></li>   
+								<li><input type="checkbox" name="exportProducts"  value="玻璃制品"    data-labelauty="玻璃制品"></li> 
+								<li><input type="checkbox" name="exportProducts"  value="一次性用品"  data-labelauty="一次性用品"></li>   
+								<li><input type="checkbox" name="exportProducts"  value="不锈钢制品"  data-labelauty="不锈钢制品"></li>   
+								<li><input type="checkbox" name="exportProducts"  value="皮革类制品"  data-labelauty="皮革类制品"></li>   
+								<!--<li><input type="checkbox" name="exportProducts"  value="其他" data-labelauty="其他"></li>--> 
+							</ul>
+							
+							<label id="otherExportProductsNode"><span>其他出口产品(选填,多种产品请用逗号分隔)</span> 
+								<input placeholder="请输入其他出口产品" type="text"  name="otherExportProducts" id="otherExportProducts">
+							</label>							
+				    	</label>
+					</section>
+					<!--外贸状况 结束-->
+
+					<!--质量体系认证 开始-->
+					<section id="step4">
+						<label style="text-align: center;"><span>质量体系认证</span></label>
+						<label><span>国内认证证书(最多上传8张) <b id="homeImageUrlsText">已上传0张</b></span>
+							<img src="<%= require('../images/delete.png') %>" class="del" style="width: 23px;height: 23px;" id="homeImageUrlsDel">
+							<div class="add_pic1" id="homeImageUrlsUpd">								
+							</div>
+							<div class="pic_view1" id="homeImageUrlsView">
+								<!--<div class="picitem"><img src="images/right_arrow_gray.png"></div>-->
+							</div>															
+						</label>
+
+						<label><span>国际认证证书(最多上传8张) <b id="internationalImageUrlsText">已上传0张</b></span>
+							<img src="<%= require('../images/delete.png') %>" class="del" style="width: 23px;height: 23px;" id="internationalImageUrlsDel">
+							<div class="add_pic1" id="internationalImageUrlsUpd">								
+							</div>
+							<div class="pic_view1" id="internationalImageUrlsView">								
+							</div>							
+						</label>
+					</section>
+
+					<section id="step5">
+						<label><span>厂房持有</span> 
+							<ul class="dowebok">
+								<li><input type="radio" name="worksiteType" data-labelauty="自有" value="自有" checked="checked"></li>
+								<li><input type="radio" name="worksiteType" data-labelauty="租用" value="租用" ></li>
+							</ul>		
+						</label>
+						<label><span>租期开始时间</span> 
+							<input placeholder="请选择时间" type="text" tabindex="15" name="tenancyStart" id="tenancyStart" readonly="readonly">		
+						</label>
+						<label><span>租期结束时间</span> 
+							<input placeholder="请选择时间" type="text" tabindex="16" name="tenancyEnd" id="tenancyEnd" readonly="readonly">		
+						</label>
+
+						<label><span>厂区占地面积(平米)</span> 
+							<input placeholder="厂区占地面积" type="text" tabindex="17" name="worksiteArea" id="worksiteArea" maxlength="50">		
+						</label>
+
+						<label><span>生车车间面积(平米)</span> 
+							<input placeholder="生车车间面积" type="text" tabindex="18" name="workshopArea" id="workshopArea" maxlength="50">		
+						</label>
+
+						<label><span>成品仓面积(平米)</span> 
+							<input placeholder="成品仓面积" type="text" tabindex="19" name="finishedgoodsArea" id="finishedgoodsArea" maxlength="50">		
+						</label>
+
+						<label><span>检验及测试区域面积(平米)</span> 
+							<input placeholder="检验及测试区域面积" type="text" tabindex="20" name="inspectArea" id="inspectArea" maxlength="50">		
+						</label>
+					</section>
+
+					<section id="step6">
+						<label><span>员工总数</span> 
+							<input placeholder="员工总数" type="text" tabindex="21" name="onEmpVolume" id="onEmpVolume">
+						</label>
+
+						<label><span>管理人员总数</span> 
+							<input placeholder="管理人员总数" type="text" tabindex="22" name="mngEmpVolume" id="mngEmpVolume">
+						</label>
+
+						<label><span>技术人员总数</span> 
+							<input placeholder="技术人员总数" type="text" tabindex="23" name="technicalStaffVolume" id="technicalStaffVolume">
+						</label>
+
+						<label><span>专职质量人员总数</span> 
+							<input placeholder="专职质量人员总数" type="text" tabindex="24" name="qualityStaffVolume" id="qualityStaffVolume">
+						</label>
+					</section>
+				</form>
+			</main>
+
+			<!--底部导航 开始-->
+			<footer>
+				<div class="order-tj">
+					<input type="button" id="btnNext" value="下一步">
+				</div>
+			</footer>
+			<!--底部导航 结束-->
+
+			<input type="hidden" id="step" value="1" />
+
+			<!--企业营业执照图片-->
+			<input type="hidden" id="licenseImageUrl" value="" />
+			<!--国内认证证书图片-->
+			<input type="hidden" id="homeImageUrls" value="" />
+			<!--国际认证证书图片-->
+			<input type="hidden" id="internationalImageUrls" value="" />
+			<%= require('html-loader!./layout/footer.html') %>
+	</body>
+</html>

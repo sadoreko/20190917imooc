@@ -1,0 +1,3 @@
+{{#datalist}}
+<li><a data="checkedText{{id}}" class="categoryItem">{{value}}<b id="checkedText{{id}}"></b></a></li>
+{{/datalist}}

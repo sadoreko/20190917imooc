@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>
+
+	<body>
+		<header><a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+		<div class="section-common"></div>
+		<div class="section-personal">
+			<!--个人信息 （头像，名称，会员号） 开始-->
+			<div class="personal">
+				<!--登录之后显示这部分 开始-->
+				<div class="personal_head"><img src="<%= require('../images/head_new.png') %>" /></div>
+				<div class="personal_infor">
+					<!--湖南XXXXXXXXXX公司-->
+					<p class="name" id="userRealname"></p>
+					<!--企业认证：未认证-->
+					<!--<p class="vip_num" id="licenseAduit">申请认证</p>-->
+				</div>
+				<!--登录之后显示这部分 结束-->
+
+				<!--<a href="supplier-info.html" class="right_arrow"></a>-->
+			</div>
+			<!--个人信息 （头像，名称，会员号） 结束-->
+
+			<!--活动管理 开始-->
+			<div class="my_order">
+				<a class="allmyorder_link" href="#"> <propertyText langKey="profile.label.event.eventMng">活动管理</propertyText><span langKey="profile.label.event.allEvent">全部活动</span><img src="<%= require('../images/right_arrow_gray.png') %>"> </a>
+				<ul>
+					<li>
+						<a><propertyText langKey="profile.label.event.waitJoin">待参与</propertyText>
+							<p class="spot">0</p>
+						</a>
+					</li>
+					<li>
+						<a><propertyText langKey="profile.label.event.areadyJoin">已报名</propertyText>
+							<p class="spot">0</p>
+						</a>
+					</li>
+					<li>
+						<a><propertyText langKey="profile.label.event.doing">进行中</propertyText>
+							<p class="spot">0</p>
+						</a>
+					</li>
+					<li>
+						<a><propertyText langKey="profile.label.event.ended">已结束</propertyText>
+							<p class="spot">0</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--活动管理 结束-->
+
+			<!--个人中心 -->
+			<div class="personal_func">
+				<ul class="clear">
+					<li class="collect">
+						<a href="#">
+						<propertyText langKey="profile.label.event.signIn">活动签到</propertyText>
+						</a>
+					</li>
+					<li class="message">
+						<a href="#">
+						<propertyText langKey="profile.label.event.remind ">活动提醒</propertyText>
+						</a> 
+					</li>
+					<li class="message">
+						<a href="#">
+						<propertyText langKey="profile.label.order.remind">订单提醒</propertyText>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--底部导航 开始-->
+		<div class="nav_bottom">
+			<ul>
+				<li>
+					<a href="./index.html">
+						<propertyText langKey="profile.label.menu.index">首页</propertyText>
+					</a>
+				</li>
+				<li>
+					<a href="./newsMore.html">
+						<propertyText langKey="profile.label.menu.event">活动</propertyText>
+					</a>
+				</li>
+				<!-- <li>
+					<a href="#">
+						<propertyText langKey="profile.label.menu.find">发现</propertyText>
+					</a>
+				</li> -->
+				<li class="focus">
+					<a>
+						<propertyText langKey="profile.label.menu.person">个人中心</propertyText>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--底部导航 结束-->
+		
+		
+		<section id="enMsg">
+			<!--遮罩层-->
+			<div class="bgPop" style="display:block"></div>
+			<!--英文-弹出框-->
+			<div class="pop-sucss"  style="display:block" >
+			<div class="pop-content">
+			  <img src="<%= require('../images/success2.png') %>" class="su-icon">
+			  <h3>Congratulations on your successful registration.</h3>
+			  <p>You have received a beautiful gift. Please cash the prize with this information.</p>
+			  </div>
+			  <img src="<%= require('../images/delete.png') %>" class="guabi pop-close" id="closeEn">
+			</div>				
+		</section>
+		
+		
+		<section id="frMsg">
+			<!--遮罩层-->
+			<div class="bgPop" style="display:block"></div>
+			<!--英文-弹出框-->
+			<div class="pop-sucss" style="display:block" >
+			<div class="pop-content">
+			  <img src="<%= require('../images/success2.png') %>" class="su-icon">
+			  <h3>Félicitations pour votre inscription.</h3>
+			  <p>Vous avez reçu un beau cadeau.s'il vous plaît, encaisse le prix avec cette information.</p>
+			  </div>
+			  <img src="<%= require('../images/delete.png') %>" class="guabi pop-close" id="closeFr">
+			</div>				
+		</section>
+		
+		
+		<section id="zhMsg">
+			<!--遮罩层-->
+			<div class="bgPop" style="display:block"></div>			
+			<!--中文-弹出框-->
+			<div class="pop-sucss"  >
+				<div class="pop-content chinese">
+				  <img src="<%= require('../images/success2.png') %>" class="su-icon">
+				  <h3>恭喜你，注册成功</h3>
+				  <h6>您将获得精美礼品一份，请凭本信息兑奖。</h6>
+				</div>
+				<img src="<%= require('../images/delete.png') %>" class="guabi pop-close" id="closeZh">
+			</div>			
+		</section>
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+</html>

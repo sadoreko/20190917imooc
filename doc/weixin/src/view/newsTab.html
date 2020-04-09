@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+  <header><a id="backLink" href="javascript:;"></a>
+    <p id="newsTabHeader"></p>
+  </header>
+  <nav>
+    <!-- <input type="search hidden" name="" id="navSearch" class="" placeholder="搜索">
+    <label for="navSearch" class="navSearch"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;搜索</label> -->
+    <a href="./searchPage.html" class="navSearch"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;搜索</a>
+  </nav>
+  <main id="main"></main>
+
+  <%= require('html-loader!./layout/loadMore.html') %>
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

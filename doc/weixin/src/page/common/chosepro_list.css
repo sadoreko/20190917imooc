@@ -1,0 +1,35 @@
+/* CSS Document */
+/****************************
+
+*           选择商品的分类         *
+
+***************************/
+.chosepro_list {
+	width: 100%;
+	background: #fff;
+}
+.chosepro_list ul {
+	width: 100%;
+}
+.chosepro_list ul li {
+	width: 100%;
+	height: 2.2rem;
+	padding: 0 0.75rem;
+	border-bottom: 1px solid #eee;
+}
+.chosepro_list ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 2.2rem;
+	font-size: 0.7rem;
+	color: #333;
+	background: url(../../images/right_arrow_gray.png) no-repeat center right;
+	background-size: auto 0.6rem;
+}
+
+.chosepro_list ul li b {
+	float: right;
+	padding-right: 1.0rem;
+	color: #f22c2c;
+}

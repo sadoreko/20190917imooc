@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= require('html-loader!./layout/head-common.html') %>
+  <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+  <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+  <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+<body>
+  <nav><%= require('html-loader!./layout/search.html') %></nav>
+  <main id="main"></main>
+  <div id="loadMoreWrap" class="notshow"><%= require('html-loader!./layout/loadMore.html') %></div>
+  
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

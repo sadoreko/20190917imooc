@@ -1,0 +1,19 @@
+/* wongxiao 20200407 新增css样式 */
+#footer .iconfont {
+  width: 0.42rem;
+  height: 0.4rem;
+  margin: 0 auto 0.1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#footer .iconfont.icon-index { background-image: url(../images/testfooter1.png); }
+#footer .iconfont.icon-index-focus { background-image: url(../images/testfooter2.png); }
+#footer .iconfont.icon-mall { background-image: url(../images/testfooter3.png); }
+#footer .iconfont.icon-mall-focus { background-image: url(../images/testfooter4.png); }
+#footer .iconfont.icon-activity { background-image: url(../images/testfooter5.png); }
+#footer .iconfont.icon-activity-focus { background-image: url(../images/testfooter6.png); }
+#footer .iconfont.icon-mine { background-image: url(../images/testfooter7.png); }
+#footer .iconfont.icon-mine-focus { background-image: url(../images/testfooter8.png); }
+
+/* 个人中心 */
+.user .couponWrap .couponTit { padding-left: 0.6rem; background-image: url(../images/testCoupon.png); background-repeat: no-repeat; background-position: left; background-size: 0.35rem; }

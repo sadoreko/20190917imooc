@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>
+
+	<body>
+		<!--导航栏-->
+		<header>
+			<a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+
+		<div class="section-common">
+			<form>				
+				<div class="form-group" >
+					<div class="product-tag" style="width: 100%;"> 
+						<div class="tag-list" >
+							<label>厂房持有(点击选中)</label>
+							<a class="item w2" name="worksiteType" data="自有">自有</a>
+							<a class="item w2" name="worksiteType" data="租用">租用</a>															
+						</div>
+					</div>						
+				</div>				
+				
+				<div class="form-group">
+					<label>租期时间</label> 
+					<input placeholder="请选择租期开始时间" type="text" tabindex="2" name="tenancyStart" id="tenancyStart"><label>开始</label> 		
+				</div>
+				<div class="form-group">
+					<label>租期时间</label> 
+					<input placeholder="请选择租期结束时间" type="text" tabindex="3" name="tenancyEnd" id="tenancyEnd"><label>结束</label> 		
+				</div>
+			
+
+				<div class="form-group"><label>厂区面积</label>  
+					<input placeholder="厂区面积" type="text" tabindex="4" name="worksiteArea" id="worksiteArea" maxlength="50"><label>平米</label> 	
+				</div>
+
+				<div class="form-group"><label>车间面积</label>  
+					<input placeholder="生车车间面积" type="text" tabindex="5" name="workshopArea" id="workshopArea" maxlength="50"><label>平米</label> 		
+				</div>
+
+				<div class="form-group"><label>成品仓</label>  
+					<input placeholder="成品仓面积" type="text" tabindex="6" name="finishedgoodsArea" id="finishedgoodsArea" maxlength="50"><label>平米</label> 		
+				</div>
+
+				<div class="form-group"><label>检测区域</label>  
+					<input placeholder="检验及测试区域面积" type="text" tabindex="7" name="inspectArea" id="inspectArea" maxlength="50"><label>平米</label> 		
+				</div>
+				
+			</form>
+
+		</div>
+
+		<!--底部导航 开始-->
+		<footer>
+			<div class="order-tj">
+				<input type="button" id="btnSubmit" value="提交">
+			</div>
+		</footer>
+		<!--底部导航 结束-->
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+	
+</html>

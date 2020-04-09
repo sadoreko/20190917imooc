@@ -1,0 +1,90 @@
+/* CSS Document */
+/*************************************************
+
+*     底部导航 - 首页，分类，发现，购物车，个人中心     *
+
+**************************************************/
+.nav_bottom {
+	width: 100%;
+	height: 2.45rem;
+	background: #fff;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	box-shadow: 0 -0.025rem 0.025rem 0 rgba(204,204,204,0.50);
+}
+.nav_bottom ul {
+	width: 100%;
+	height: 2.45rem;
+}
+.nav_bottom ul li {
+	/* width: 25%; */
+	width: 33.3%;
+	height: 2.45rem;
+	float: left;
+	text-align: center;
+}
+.nav_bottom ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 0.6rem;
+	color: #333;
+	padding-top: 1.45rem;
+	line-height: 0.85rem;
+}
+.nav_bottom ul li.focus a {
+	color: #AE4A4C;
+}
+.nav_bottom ul li:nth-child(1) {
+	background: url(../../images/symbols-home_icon_hov2.png) no-repeat center top;
+	background-size: 1.5rem;
+}
+.nav_bottom ul li:nth-child(1).focus {
+	background: url(../../images/symbols-home_icon_hov.png)no-repeat center top;
+	background-size: 1.5rem;
+}
+.nav_bottom ul li:nth-child(2) {
+	background: url(../../images/symbols-home_icon_classify2.png)no-repeat center top;
+	background-size: 1.5rem;
+}
+.nav_bottom ul li:nth-child(2).focus {
+	background: url(../../images/symbols-home_icon_classify.png)no-repeat center top;
+	background-size: 1.5rem;
+}
+.nav_bottom ul li:nth-child(3) {
+	background: url(../../images/symbols-home_icon_find.png)no-repeat center top;
+	background-size: 1.5rem;
+}
+.nav_bottom ul li:nth-child(3).focus {
+	background: url(../../images/symbols-home_icon_find2.png)no-repeat center top;
+	background-size: 1.5rem;
+}
+.nav_bottom ul li:nth-child(4) {
+	background: url(../../images/symbols-home_icon_me.png)no-repeat center top;
+	background-size: 1.5rem;
+}
+.nav_bottom ul li:nth-child(4).focus {
+	background: url(../../images/symbols-home_icon_me2.png)no-repeat center top;
+	background-size: 1.5rem;
+}
+/*购物车数量*/
+.nav_bottom ul li a.cart {
+	position: relative;
+}
+.nav_bottom ul li a.cart span.spot {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	height: 0.85rem;
+	line-height: 1;
+	min-width: 0.85rem;
+	padding: 0 0.2rem;
+	background: #f22c2c;
+	font-size: 0.6rem;
+	color: #fff;
+	border-radius: 0.425rem;
+	position: relative;
+	top: -2.1rem;
+	left: 2.1rem;
+}

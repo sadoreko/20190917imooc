@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%= require('html-loader!./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title%></title>
+  <style>
+    /*导航栏样式*/
+    /* header {
+    width: 100%;
+    height: 2.15rem;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  header p {
+    font-size: 0.8rem;
+    color: #333333;
+    text-align: center;
+    line-height: 2.15rem;
+  }
+  header a.release {
+    width: 3rem;
+    text-align: center;
+    line-height: 2.15rem;
+    background: none;
+    font-size: 0.6rem;
+    position: absolute;
+    right: 0;
+    left: auto;
+    color: #333;
+  } */
+    /* header */
+    /* header .backBtn {
+    display: block;
+    width: 1.85rem;
+    height: 2.15rem;
+    background-image: url(../images/symbols-fanhui.png);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: center;
+    color: #666;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header .menu {
+    display: block;
+    width: 1.85rem;
+    height: 2.15rem;
+    color: #666;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    text-align: center;
+    font-size: 15px;
+    line-height: 2.15rem;
+  } */
+  </style>
+</head>
+
+<body>
+  <header><a id="backLink" href="javascript:;"></a>
+    <p><%= htmlWebpackPlugin.options.title%></p>
+  </header>
+  <!--导航栏-->
+  <div class="section-common bg_white h100">
+    <!--手机号登录 开始-->
+    <div class="login">
+      <div class="loginHeader"><img src="<%= require('../images/loginHeader.png') %>" alt=""></div>
+      <div class="loginLogo"><img src="<%= require('../images/loginLogo.png') %>" alt=""></div>
+      <div class="form-group">
+        <div class="form-item form-user">
+          <input placeholder="请输入邮箱地址" id="user">
+        </div>
+      <div><label for="user" id="errMsgUser" class="errTip"></label></div>
+        <div class="form-item form-psw">
+          <input placeholder="请输入密码" id="psw">
+        </div>
+        <div><label for="psw" id="errMsgPsw" class="errTip"></label></div>
+        
+        <button class="loginBtn" id="loginBtn">登录</button>
+
+        <div class="form-links">
+          <!-- <a href="./switch-register.html">立即注册</a> 2020-03-19 注释掉, 因为是共通登录页面, 无法区分是供应商/采购商/客服/管理人员 -->
+          <a href="#">忘记密码？</a>
+        </div>
+      </div>
+
+    </div>
+    <!--手机号登录 结束-->
+  </div>
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+
+</html>

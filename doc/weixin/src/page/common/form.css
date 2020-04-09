@@ -1,0 +1,154 @@
+/* CSS Document */
+/**********************************
+
+*              表单样式            *
+
+**********************************/
+.del{position:absolute; right: 0;}
+
+form .form-group {
+	display: flex;
+	width: 100%;
+	background: #fff;
+	padding: 0.55rem 0.8rem 0;
+}
+form .form-group:last-child {
+	padding: 0.55rem 0.8rem;
+}
+form .form-group label {
+	font-size: 0.7rem;
+	color: #333;
+	line-height: 2.2rem;
+	width: 3.65rem;
+}
+form .form-group input {
+	flex: 1;
+	border: 1px #eee solid;
+	border-radius: 0.2rem;
+	padding-left: 0.25rem;
+	font-size: 0.6rem;
+	color: #666;
+}
+form .form-group select {
+	flex: 1;
+	border: 1px #eee solid;
+	border-radius: 0.2rem;
+	padding-left: 0.25rem;
+	font-size: 0.6rem;
+	color: #666;
+}
+form .form-group textarea {
+	flex: 1;
+	border: 1px #eee solid;
+	border-radius: 0.2rem;
+	padding: 0.25rem;
+	height: 4.4rem;
+	font-size: 0.6rem;
+	color: #666;
+}
+form .form-group input + button {
+	width: 4.6rem;
+	height: 2.2rem;
+	border: 1px solid #B19E76;
+	margin-left: 0.8rem;
+	font-size: 0.7rem;
+	color: #666;
+	border-radius: 0.2rem;
+}
+.sure_btn {
+	margin: 2.45rem auto 0;
+}
+
+.order-tj {
+	background: #fff;
+	height: 2.45rem;
+	text-align: right;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.order-tj input {
+	border: 0;
+	background: #45a4fd;
+	color: #fff;
+	height: 2.45rem;
+	width: 5rem;
+	font-size: 0.7rem;
+}
+
+.add_pic{
+width: 100%;
+height: 120px;
+border-radius:0.25rem;
+border: 1px solid #bbbbbb;	
+background: url(../../images/add_pic.png) no-repeat center;
+background-size: 3rem;
+background-color: #fff;	
+}
+
+.pic_view{
+width: 100%;
+height: 120px;
+border-radius:0.25rem;
+border: 1px solid #bbbbbb;
+background-color: #fff;		
+}
+
+.pic_view1{
+width: 100%;
+height: 250px;
+border-radius:0.25rem;
+border: 1px solid #bbbbbb;
+background-color: #fff;
+display:flex; 
+align-content: flex-start;
+flex-wrap:wrap;		
+}
+
+.add_pic1{
+width: 100%;
+height: 250px;
+border-radius:0.25rem;
+border: 1px solid #bbbbbb;
+background: url(../../images/add_pic.png) no-repeat center;
+background-size: 3rem;
+background-color: #fff;	
+}
+
+.pic_view2{
+width: 100%;
+height: 320px;
+border-radius:0.25rem;
+border: 1px solid #bbbbbb;
+background-color: #fff;
+display:flex; 
+align-content: flex-start;
+flex-wrap:wrap;		
+}
+
+.add_pic2{
+width: 100%;
+height: 320px;
+border-radius:0.25rem;
+border: 1px solid #bbbbbb;
+background: url(../../images/add_pic.png) no-repeat center;
+background-size: 3rem;
+background-color: #fff;	
+}
+
+.picitem{ position:relative; margin:0.5rem 0.5rem 0.25rem 0;}
+.picitem img{ width:60px;height:60px ; border-radius:0.25rem;}
+
+
+.ret_view{
+width: 100%;
+height: 250px;
+border-radius:0.25rem;
+border: 0px;
+background-color: #fff;
+display:flex; 
+align-content: flex-start;
+flex-wrap:wrap;		
+}

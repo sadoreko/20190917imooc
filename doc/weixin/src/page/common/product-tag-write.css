@@ -1,0 +1,39 @@
+/* CSS Document */
+
+.product-tag .item {
+	margin-right: 6px;
+	padding: 10px 18px;
+	font-size: 12px;
+}
+
+.product-tag .item.active {
+	background: #0f6cb2;
+}
+
+.product-tag .item.active{
+	color: #fff;
+}
+
+.product-tag .item.w1{
+	width:20%;
+}
+
+.product-tag .item.w2{
+	width:25%;
+}
+
+.product-tag .item.w3{
+	width:45%;
+}
+
+.product-tag .item {
+	background-color: #f5f5f5;
+	color: #666666;
+	display: inline-block;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	padding: 6px 12px;
+	border-radius: 3px;
+	text-align: center;
+	min-height: 30px;
+}

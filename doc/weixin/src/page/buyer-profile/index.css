@@ -1,0 +1,9 @@
+.pop-sucss {position: fixed; top: 20%; left:5%; right:5%; width: 90%; margin: 0 auto; padding-bottom: 0;  z-index:9999; text-align:center;}
+.pop-sucss .pop-content { background: #ffffff; border-radius:0.5rem; text-align:center; padding:0; }
+.pop-sucss .su-icon{ width:15.15rem; margin:1rem 0 0.75rem; }
+.pop-sucss .pop-content h3{ font-size:0.6rem; text-align:center; color:#0e0e0e; font-family:Arial, Helvetica, sans-serif; font-weight:600;}
+.pop-sucss .pop-content p{font-size:0.55rem;  color:#fff; font-family:Arial, Helvetica, sans-serif; height:3rem;display: flex;align-items:center; background:#157ed2; padding:0 1rem; text-align:left; line-height:0.75rem; margin:0.75rem 0 0; border-radius:0 0 0.5rem 0.5rem;}
+.pop-sucss .chinese{ padding-bottom:0.1rem;}
+.pop-sucss .chinese h3{font-family: "FZLT";  font-size:0.9rem; }
+.pop-sucss .chinese h6{font-family: "FZLT";  font-size:0.7rem; text-align:center; color:#157ed2; height:2rem; line-height:2rem; background:#fffcf5; border:1px solid #e7eff3; margin:1rem; border-radius:0.25rem; }
+#zhMsg, #enMsg, #frMsg { display: none; }

@@ -1,0 +1,21 @@
+{{#rows}}
+  {{#leftSide}}
+  <div class="answer">
+    <div class="heard_img left"><img src="{{imageHost}}{{imageUrl}}"></div>
+    <div class="answer_text">
+      <p>{{content}}</p>
+      <i></i>
+    </div>
+  </div>
+  {{/leftSide}}
+
+  {{#rightSide}}
+  <div class="question">
+    <div class="heard_img right"><img src="{{imageHost}}{{imageUrl}}"></div>
+    <div class="question_text clear" style="max-width: 334px;">
+      <p>{{content}}</p>
+      <i></i>
+    </div>
+  </div>
+  {{/rightSide}}
+{{/rows}}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>>
+
+	<body>
+
+		<!--导航栏-->
+		<header>
+			<a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+
+		<div class="section-common">
+			<form>
+				<div class="form-group" >
+					<div class="product-tag" style="width: 100%;"> 
+						<div class="tag-list" >
+							<label>外贸经验(点击选中)</label>
+							<a class="item w2" name="isForeignTrade" data="有经验">有经验</a>
+							<a class="item w2" name="isForeignTrade" data="无经验">无经验</a>															
+						</div>
+					</div>						
+				</div>
+				
+				<div class="form-group" >
+					<div class="product-tag" style="width: 100%;"> 
+						<div class="tag-list" >
+							<label>业务团队(点击选中)</label>
+							<a class="item w1" name="isForeignTradeTeam" data="有">有</a>
+							<a class="item w1" name="isForeignTradeTeam" data="无">无</a>															
+						</div>
+					</div>						
+				</div>
+				
+				<div class="form-group" >
+					<label style="width: 100%;">出口方式(点击选中)</label>
+				</div>
+				<div class="form-group" >
+					<div class="product-tag" style="width: 100%;"> 
+						<div class="tag-list" >
+							<a class="item w2" name="exportMode" data="市场采购">市场采购</a>
+							<a class="item w2" name="exportMode" data="跨境电商">跨境电商</a>	
+							<a class="item w2" name="exportMode" data="加工贸易">加工贸易</a>
+							<a class="item w2" name="exportMode" data="互市区贸易">互市区贸易</a>							
+							<a class="item w2" name="exportMode" data="一般贸易">一般贸易</a>
+							<a class="item w2" name="exportMode" data="代理公司">代理公司</a>	
+							<a class="item w2" name="exportMode" data="贸易公司">贸易公司</a>	
+						</div>
+					</div>						
+				</div>
+				
+				<!--其他出口方式-->
+				<div class="form-group">
+					<label>其他方式</label>
+					<input placeholder="请输入其他出口方式" type="text"  name="otherExportMode" id="otherExportMode">
+				</div>				
+							
+				
+				<div class="form-group">
+					<label>年出口额</label>
+					<input placeholder="请输入年出口额(人民币 单位:万元)" type="text" tabindex="3" name="rmbExportVolume" id="rmbExportVolume" style="text-align: right;" ><label>万元</label>
+				</div>
+			
+
+				<div class="form-group">
+					<label>年出口额</label>
+					<input placeholder="请输入年出口额(美元 单位:万元)" type="text" tabindex="3" name="dollarExportVolume" id="dollarExportVolume" style="text-align: right;" ><label>万元</label>
+				</div>
+				<!--出口国家-->
+				<div class="form-group">
+					<label>出口国家</label>
+					<input placeholder="请输入出口国家(逗号分隔)" type="text" tabindex="2" name="exportCountries" id="exportCountries">
+				</div>
+								
+				<div class="form-group">
+					<label style="width: 100%;">出口产品(点击选中)</label>
+				</div>
+
+				<div class="form-group" >
+					<div class="product-tag" style="width: 100%;">
+						<div class="tag-list" >
+							<a class="item w1" name="exportProducts" data="陶瓷">陶瓷</a>
+							<a class="item w1" name="exportProducts" data="假发">假发</a>
+							<a class="item w1" name="exportProducts" data="湘绣">湘绣</a>
+							<a class="item w1" name="exportProducts" data="服装">服装</a>
+							<a class="item w1" name="exportProducts" data="鞋类">鞋类</a>
+							<a class="item w1" name="exportProducts" data="箱包">箱包</a>
+							<a class="item w1" name="exportProducts" data="茶叶">茶叶</a>
+							<a class="item w1" name="exportProducts" data="玩具">玩具</a>
+							<a class="item w2" name="exportProducts" data="日用百货">日用百货</a>
+							<a class="item w2" name="exportProducts" data="日化用品">日化用品</a>
+							<a class="item w2" name="exportProducts" data="家居用品">家居用品</a>
+							<a class="item w2" name="exportProducts" data="小五金">小五金</a>   
+							<a class="item w2" name="exportProducts" data="小家电">小家电</a>   
+							<a class="item w2" name="exportProducts" data="仿真花">仿真花</a>   
+							<a class="item w2" name="exportProducts" data="家纺类">家纺类</a>   
+							<a class="item w2" name="exportProducts" data="滕竹编">滕竹编</a>   
+							<a class="item w2" name="exportProducts" data="玻璃制品">玻璃制品</a>
+							<a class="item w2" name="exportProducts" data="一次性用品">一次性用品</a>   
+							<a class="item w2" name="exportProducts" data="不锈钢制品">不锈钢制品</a>   
+							<a class="item w2" name="exportProducts" data="皮革类制品">皮革类制品</a>																	
+						</div>
+					</div>
+				</div>
+				
+				<!--出口国家-->
+				<div class="form-group">
+					<label>出口国家</label>
+					<input placeholder="请输入其他出口产品" type="text" tabindex="2" name="otherExportProducts" id="otherExportProducts">
+				</div>				
+				
+			</form>
+
+		</div>
+
+		<!--底部导航 开始-->
+		<footer>
+			<div class="order-tj">
+				<input type="button" id="btnSubmit" value="提交">
+			</div>
+		</footer>
+		<!--底部导航 结束-->
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+
+</html>

@@ -1,0 +1,17 @@
+<section class="section-body">
+    <div class="title">
+      <h1>{{title}}</h1>
+      <div class="meta_list">
+        <span class="content-text">{{author}}</span>
+        <span class="content-line">|</span>
+        <span class="content-text">{{date}}</span>
+        <span class="content-line">|</span>
+        <span class="content-text content-view">{{readNum}}</span>
+      </div>
+    </div>
+    <div class="detail-container">{{{content}}}</div>
+  </section>
+  <footer>
+    <p>…………</p>
+    <p>阅读{{readNum}}次</p>
+  </footer>

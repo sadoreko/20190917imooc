@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>
+	
+	<body>
+		<!--导航栏-->
+		<header>
+			<a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+
+		<div class="section-common">
+			<form>
+
+				<div class="form-group"><label>员工总数</label>
+					<input placeholder="员工总数" type="text" tabindex="1" name="onEmpVolume" id="onEmpVolume" style="text-align: right;"><label>人</label>
+				</div>
+
+				<div class="form-group"><label>管理人员</label>
+					<input placeholder="管理人员总数" type="text" tabindex="2" name="mngEmpVolume" id="mngEmpVolume" style="text-align: right;"><label>人</label>
+				</div>
+
+				<div class="form-group"><label>技术人员</label>
+					<input placeholder="技术人员总数" type="text" tabindex="3" name="technicalStaffVolume" id="technicalStaffVolume" style="text-align: right;"><label>人</label>
+				</div>
+
+				<div class="form-group"><label>专职质量</label>
+					<input placeholder="专职质量人员总数" type="text" tabindex="4" name="qualityStaffVolume" id="qualityStaffVolume" style="text-align: right;"><label>人</label>
+				</div>
+
+			</form>
+		</div>
+
+		<!--底部导航 开始-->
+		<footer>
+			<div class="order-tj">
+				<input type="button" id="btnSubmit" value="提交">
+			</div>
+		</footer>
+		<!--底部导航 结束-->
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+
+</html>

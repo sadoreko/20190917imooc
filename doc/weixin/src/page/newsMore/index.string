@@ -1,0 +1,20 @@
+{{#data}}
+<div class="itemContainer">
+  <div class="itemLinkWrap">
+    <div class="itemImg">
+      <img src="{{imageHost}}{{imageUrl}}" alt="{{imageUrl}}">
+    </div>
+    <div class="itemContent">
+      <p class="itemTitle"><span class="itemTitleTag">{{{tag}}}</span>{{title}}</p>
+      <p class="itemDetail">{{content}}</p>
+    </div>
+    <a href="./article.html?category={{category}}&amp;item={{id}}"></a>
+  </div>
+  <div class="itemOptions clear">
+    <div class="itemMore"></div>
+    <div class="itemView">
+      <span class="itemViewCount">{{readNum}}</span>
+    </div>
+  </div>
+</div>
+{{/data}}

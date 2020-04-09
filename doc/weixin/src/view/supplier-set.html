@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<%= require('html-loader!./layout/head-common.html') %>
+	<title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+
+<body>
+<!--导航栏-->
+<header>
+	<a href="./supplier-profile.html"></a>
+   <p><%= htmlWebpackPlugin.options.title%></p>
+</header>
+<div class="section-common bg_white"></div>
+<!--会员号-->
+<div class="setbar">
+   <p>公司名称 <span id="orgNameZh"></span> </p>
+</div>
+
+<!--推荐人-->
+<div class="setbar">
+   <p>法人 <span id="corporation"></span></p>
+</div>
+
+<!--注册时间-->
+<div class="setbar">
+   <p>注册时间 <span id="registerTime"></span> </p>
+</div>
+
+<!--公开手机号-->
+<div class="setbar">
+   <p class="setbar_radio">消息推送<span>（默认打开消息推送）</span></p>
+   <div class="form-group">
+      <input type="checkbox" checked id="phone" />
+      <label for="phone"><span></span></label>
+	 </div>
+</div>
+
+<!--更换头像-->
+<div class="setbar"> <a>
+   <p>更换头像</p>
+   <div class="user_head"><img src="<%= require('../images/msgHeader.png') %>"></div>
+   </a>
+   <input type="file" accept="image/*">
+</div>
+
+<!--退出登录按钮--> 
+<a class="btn logout_btn" id="logoutBtn">退出登录</a> 
+
+<!--退出登录提示框 开始-->
+<div class="prompt_popup"> <a class="close"></a>
+   <div class="popup">
+      <p>您确定要退出登录吗？</p>
+      <div class="form-group">
+         <button class="cancel">取消</button>
+         <button class="sure">确定</button>
+      </div>
+   </div>
+</div>
+<!--退出登录提示框 结束--> 
+<%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>

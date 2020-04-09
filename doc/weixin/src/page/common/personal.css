@@ -1,0 +1,279 @@
+/* CSS Document */
+/***************************
+
+*          个人中心         *
+
+***************************/
+/*---------------------Popup------------------------------*/
+.bgPop { position: fixed; top: 0; bottom: 0; height: 100%; width:100%; background: rgba(0, 0, 0, .2); display: none; z-index:999 }
+.pop-erwm { position: fixed; top: 20%; left:10%; right:10%; width: 80%; margin: 0 auto; padding-bottom: 0; display:none; z-index:9999; text-align:center; }
+.pop-erwm .show-pop { background: #ffffff; border-radius:0.5rem; text-align:center; padding:0 0 0.5rem; }
+.pop-erwm .pic-wem { width:90%; margin:0.5rem 0 0; display: inline-block; padding:0; }
+.pop-erwm p { font-size:0.9rem; color:#505050; line-height:1.2rem; }
+.pop-erwm .chinese { font-size:0.75rem; margin-bottom:0.15rem; margin-top:-0.25rem; }
+.pop-erwm .english { font-size:1rem; color:#000; margin-bottom:0.75rem; }
+
+.pop-erwm .show-pop{ padding-top:0.75rem;}
+.show-pop .score{ justify-content:center; display: flex; align-items:center; height:12rem; background:url(../../images/05.png) no-repeat center; background-size:12rem;  }
+.show-pop .score span{ font-size:3rem; color:#333}
+.english a{ font-size:1rem; color:#39F;}
+
+.guabi { width:2.1rem; height:2.1rem; margin-top:0.5rem; }
+
+/*------------------------------------扫码界面---------------------------------------*/
+.section-personal{
+	padding:0 0 2.5rem;
+}
+/*个人中心顶部 个人信息 （头像 名称 会员号）*/
+.personal {
+	display: flex;
+	width: 100%;
+	/*background: #45a4fd;*/
+	background:url(../../images/bg.jpg) no-repeat;
+	padding: 1.65rem 0 1.65rem 1.15rem;
+	position: relative;
+}
+.personal .personal_head {
+	width: 3.2rem;
+	height: 3.2rem;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align: center;
+}
+.personal .personal_head img {
+	width: 100%;
+}
+.personal .personal_infor {
+	padding: 0 0 0 1.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.personal .personal_infor p.please_login {
+	font-size: 0.8rem;
+	line-height: 1.1rem;
+}
+.personal .personal_infor p.please_login a {
+	color: #fff;
+}
+.personal .personal_infor p.name {
+	font-size: 0.8rem;
+	color: #fff;
+	line-height: 1.1rem;
+}
+.personal .personal_infor p.vip_num {
+	font-size: 0.7rem;
+	color: rgba(255,255,255,0.50);
+	line-height: 1rem;
+}
+.personal a.right_arrow {
+	display: block;
+	height: 100%;
+	width: 2.9rem;
+	background: url(../../images/symbols-more-w.png) no-repeat center;
+	background-size: auto 0.9rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/*我的订单 全部订单链接 待付款 待收货 待评价 退款/售后 */
+.my_order {
+	width: 100%;
+	background: #fff;
+	margin-bottom: 0.3rem;
+}
+.my_order a.allmyorder_link {
+	display: block;
+	height: 2.45rem;
+	padding: 0 0 0 1.65rem;
+	font-size: 0.8rem;
+	color: #000;
+	line-height: 2.45rem;
+	border-bottom: 1px solid #eee;
+	position: relative;
+}
+.my_order a.allmyorder_link span {
+	font-size: 0.7rem;
+	color: #999;
+	padding: 0 2.45rem 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.my_order a.allmyorder_link img {
+	height: 0.8rem;
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.my_order ul {
+	width: 100%;
+	display: flex;
+}
+.my_order ul li {
+	width: 25%;
+	height: 4rem;
+	text-align: center;
+}
+.my_order ul a {
+	display: block;
+	width: 100%;
+	height: 4rem;
+	padding: 2.175rem 0 0;
+	font-size: 0.7rem;
+	color: #666;
+	line-height: 0.85rem;
+	position: relative;
+}
+.my_order ul a .spot {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	height: 0.85rem;
+	min-width: 0.85rem;
+	padding: 0 0.2rem;
+	background: #f22c2c;
+	font-size: 0.6rem;
+	color: #fff;
+	border-radius: 0.425rem;
+	position: relative;
+	top: -2.3rem;
+	left: 2.1rem;
+}
+.my_order ul a .spot::before {
+	content: '';
+	width: 100%;
+	height: 50%;
+	margin-bottom: -.06rem;
+}
+.my_order ul li:nth-child(1) {
+	background: url(../../images/daifukuan.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+.my_order ul li:nth-child(2) {
+	background: url(../../images/daishouhuo.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+.my_order ul li:nth-child(3) {
+	background: url(../../images/yifahuo.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+.my_order ul li:nth-child(4) {
+	background: url(../../images/daipingjia.png)no-repeat center top;
+	background-size: 1.2rem auto;
+}
+/*我是服务天使 入口*/
+.service_angel {
+	width: 100%;
+	padding: 0.45rem 0.65rem;
+	background: #fff;
+	border-bottom: 1px #eee solid;
+}
+.service_angel a {
+	display: block;
+	height: 2.15rem;
+	background: #eee;
+	border-radius: 1.075rem;
+	font-size: 0.7rem;
+	color: #666;
+	padding: 0 0 0 2.95rem;
+	line-height: 2.15rem;
+	position: relative;
+}
+
+.service_angel a img:nth-child(1) {
+	height: 1.5rem;
+	position: absolute;
+	top: 50%;
+	left: 0.8rem;
+	transform: translateY(-50%);
+}
+.service_angel a img:nth-child(2) {
+	height: 1.5rem;
+	position: absolute;
+	top: 50%;
+	right: 0.55rem;
+	transform: translateY(-50%);
+}
+/*个人中心功能区入口  （我的二维码，我的消息等）*/
+.personal_func {
+	width: 100%;
+	background: #fff;
+}
+.personal_func ul {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.personal_func ul li {
+	height: 5rem;
+	width: 33.33333333%;
+	text-align: center;
+	position: relative;
+}
+.personal_func ul li a {
+	display: block;
+	width: 100%;
+	height: 5rem;
+	padding-top: 2.9rem;
+	font-size: 0.7rem;
+	line-height: 1rem;
+	color: #666;
+}
+.personal_func ul li.qrcode {
+	background: url(../../images/symbols-erweima-black1.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+.personal_func ul li.message {
+	background: url(../../images/symbols-news_icon_gray3.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+
+.personal_func ul li.tao {
+	background: url(../../images/tao.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+
+.personal_func ul li.collect {
+	background: url(../../images/symbols-news_icon_singin.png) no-repeat no-repeat center top;
+	background-size: 1.2rem auto;
+}
+.personal_func ul li.address {
+	background: url(../../images/renz1.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+.personal_func ul li.advise {
+	background: url(../../images/symbols-yijian.png) no-repeat center top;
+	background-size: 1.2rem auto;
+}
+.personal_func ul li:nth-child(3n+1):after {
+	content: "";
+	display: block;
+	width: 5.2rem;
+	height: 1px;
+	background: #eee;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.personal_func ul li:nth-child(3n-1):after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #eee;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.personal_func ul li:nth-child(3n):after {
+	content: "";
+	display: block;
+	width: 5.2rem;
+	height: 1px;
+	background: #eee;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

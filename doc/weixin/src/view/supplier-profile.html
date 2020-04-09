@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>
+
+	<body>
+		<div class="section-personal">
+			<!--个人信息 （头像，名称，会员号） 开始-->
+			<div class="personal">
+
+				<!--登录之后显示这部分 开始-->
+				<div class="personal_head"><img src="<%= require('../images/head_new.png') %>" /></div>
+				<div class="personal_infor">
+					<!--湖南XXXXXXXXXX公司-->
+					<p class="name" id="orgNameZh"></p>
+					<!--企业认证：未认证-->
+					<p class="vip_num" id="licenseAduit">申请认证</p>
+					<!--能力评估：90分-->
+					<p class="vip_num">综合评分:<propertyText id="scorePage"></propertyText>分</p>
+				</div>
+				<!--登录之后显示这部分 结束-->
+
+				<a href="supplier-set.html" class="right_arrow"></a>
+			</div>
+			<!--个人信息 （头像，名称，会员号） 结束-->
+
+			<!--活动管理 开始-->
+			<div class="my_order">
+				<a class="allmyorder_link" href="#"> 活动管理<span>全部活动</span><img src="<%= require('../images/right_arrow_gray.png') %>"> </a>
+				<ul>
+					<li>
+						<a>待参与
+							<p class="spot">0</p>
+						</a>
+					</li>
+					<li>
+						<a>已报名
+							<p class="spot">0</p>
+						</a>
+					</li>
+					<li>
+						<a>进行中
+							<p class="spot">0</p>
+						</a>
+					</li>
+					<li>
+						<a>已结束
+							<p class="spot">0</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--活动管理 结束-->
+
+			<!--个人中心 我是服务天使入口（会员才显示）-->
+			<div class="service_angel">
+				<a href="supplier-model.html">市场采购贸易能力评估<img src="<%= require('../images/symbols-smiley.png') %>" /><img src="<%= require('../images/icon_more_black.png') %>" ></a>
+			</div>
+
+			<!--个人中心 -->
+			<div class="personal_func">
+				<ul class="clear">
+					<li class="address">
+						<a href="#">工商认证</a>
+					</li>
+					<li class="qrcode">
+						<a href="#">二维码名片</a>
+					</li>
+					<li class="advise">
+						<a href="#">我的客户</a>
+					</li>
+					<li class="collect">
+						<a href="#">活动签到</a>
+					</li>
+<!--					<li class="tao">
+						<a href="#">淘单广场</a>
+					</li>-->
+					<li class="message">
+						<a href="#">消息提醒</a>
+					</li>					
+					<li class="message">
+						<a href="#">订单提醒</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--底部导航 开始-->
+		<div class="nav_bottom">
+			<ul>
+				<li>
+					<a href="./index.html">首页</a>
+				</li>
+				<li>
+					<!-- <a href="./classify.html">活动</a> 没有classify页面 -->
+					<a href="./newsMore.html">活动</a>
+				</li>
+				<!-- <li>
+					<a href="./find.html">发现</a>
+				</li> -->
+				<li class="focus">
+					<a>企业中心</a>
+				</li>
+			</ul>
+		</div>
+		<!--底部导航 结束-->
+
+		<!--遮罩层-->
+		<div class="bgPop" style="display:block"></div>
+		<!--设置-检查更新-弹出框-->
+		<div class="pop-erwm" id="pop" style="display:block">
+			<div class="show-pop">
+				<div class="score"><span id="scoreTotal"></span></div>
+				<p class="chinese">分值越高越容易获得推荐</p>
+				<p class="english">
+					→ <a href="supplier-model.html">完善注册资料</a>
+				</p>
+			</div>
+			<img src="<%= require('../images/delete.png') %>" class="guabi pop-close">
+		</div>
+		
+	<%= require('html-loader!./layout/footer.html') %>
+	</body>
+</html>

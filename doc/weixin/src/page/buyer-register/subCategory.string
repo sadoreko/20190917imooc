@@ -1,0 +1,17 @@
+{{#data}}
+<div class="pro-col-6"> 							
+	<a class="pro_link">                                  
+      <div class="pro-img">                              
+      <img src='{{imageHost}}{{imageUrl}}'>
+      </div>
+      <div class="product_infor">
+        <p class="pro_title">{{goodsNm}}</p> 
+        <p class="pro_describe">产品性能介绍商品描述</p>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" id="{{chkId}}" name="goodsGroup" {{isChecked}}} value="{{goodsId}}" >
+        <label for="{{chkId}}"></label>
+      </div>
+  </a>
+</div>
+{{/data}}

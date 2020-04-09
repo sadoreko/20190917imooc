@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<%= require('html-loader!./layout/head-common.html') %>
+		<title><%= htmlWebpackPlugin.options.title%></title>
+	</head>
+
+	<body>
+		<!--导航栏-->
+		<header>
+			<a id="backLink" href="javascript:;"></a>
+			<p><%= htmlWebpackPlugin.options.title%></p>
+		</header>
+
+		<div class="section-common">
+			<form id="frmD">
+
+				<div class="form-group"><label style="width: 100%;">产品名称: <b></b></label>
+					<input type="hidden" name="goodsName" value="" />
+				</div>
+
+				<div class="form-group"><label>供货能力</label>
+					<input placeholder="月最大供货能力" type="text" name="monthMax" ><label>每月</label>
+				</div>
+
+				<div class="form-group"><label>交货期</label>
+					<input placeholder="正常交货期" type="text" name="normalDeliveryPeriod"><label>个月</label>
+				</div>
+
+				<div class="form-group"><label>最短交货</label>
+					<input placeholder="紧急状况最短交货周期" type="text" name="minDeliveryPeriod"><label>个月</label>
+				</div>
+
+				<div class="form-group">
+				</div>
+			</form>
+		</div>
+
+		<!--底部导航 开始-->
+		<footer>
+			<div class="order-tj">
+				<input type="button" id="btnSubmit" value="提交">
+			</div>
+		</footer>
+		<!--底部导航 结束-->
+		<input type="hidden" id="rowCnt" value="0">
+		<%= require('html-loader!./layout/footer.html') %>
+	</body>
+	
+
+</html>

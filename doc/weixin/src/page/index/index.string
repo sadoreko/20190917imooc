@@ -1,0 +1,18 @@
+{{#rows}}
+<div class="contentItem clear">
+  <div class="itemMain clear">
+    <a class="itemLink" href="./article.html?category={{category}}&item={{id}}"></a>
+    <div class="itemText">
+      <div class="itemTitle">{{title}}</div>
+      <div class="itemDetail">{{summary}}</div>
+    </div>
+    <div class="itemImg">
+      <img src="{{mainImageHost}}{{mainImageUrl}}" alt="">
+    </div>
+  </div>
+  <div class="itemMore"></div>
+  <div class="itemView">
+    <span class="itemViewCount">8126</span>
+  </div>
+</div>
+{{/rows}}

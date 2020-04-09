@@ -1,0 +1,39 @@
+{
+  "name": "weixin",
+  "version": "1.0.0",
+  "description": "weixin前端代码",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/webpack-dev-server",
+    "dev_win": "./node_modules/.bin/webpack-dev-server",
+    "dist": "WEBPACK_ENV=online ./node_modules/.bin/webpack -p",
+    "dist_win": "set WEBPACK_ENV=online&& ./node_modules/.bin/webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sadoreko/20190917imooc.git).git"
+  },
+  "author": "Sherry Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sadoreko/20190917imooc.git)/issues"
+  },
+  "homepage": "https://github.com/sadoreko/20190917imooc.git)#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan.js": "^3.0.2",
+    "jquery": "^3.4.1"
+  }
+}

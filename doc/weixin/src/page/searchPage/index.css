@@ -1,0 +1,89 @@
+body { background-color: #ededed; }
+nav {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ededed;
+  background-color: #fff;
+}
+.notshow { display: none; }
+/* 以下css与newsMore.html同 */
+main {
+  padding: 0 1.2rem;
+  background-color: #fff;
+}
+.itemContainer {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #efefef;
+}
+.itemContainer .itemImg {
+  width: 100%;
+  height: 7rem;
+  overflow: hidden;
+}
+.itemContainer .itemImg img {
+  width: 100%;
+  height: auto;
+}
+.itemContainer .itemContent .itemTitle {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2.5rem;
+  font-size: 17px;
+  font-weight: 400;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.itemContainer .itemContent .itemTitleTag{
+  position: absolute;
+  left: 0;
+  height: 0.8rem;
+  font-size: 12px;
+  text-align: center;
+  color: #394fd7;
+  line-height: 0.8rem;
+  left: 0.2rem;
+}
+.itemContainer .itemContent .itemDetail {
+  font-size: 14px;
+  font-weight: 400;
+  color: #888888;
+  line-height: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.itemContainer .itemLinkWrap {position: relative;}
+.itemContainer .itemLinkWrap a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.itemContainer .itemOptions { padding-top: 0.5rem; }
+.itemContainer .itemOptions .itemView {
+  float: right;
+  text-align: right;
+  font-size: 10px;
+  color: #000;
+}
+.itemOptions .itemView .itemViewCount {
+  padding-left: 20px;
+  background-image: url(../../images/iconView1.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px auto;
+}
+.itemOptions .itemMore {
+  margin-left: 10px;
+  width: 17px;
+  height: 14px;
+  float: right;
+  background-image: url(../../images/iconPoint.png);
+  background-repeat: no-repeat;
+  background-size: 17px auto;
+  background-position: center;
+}

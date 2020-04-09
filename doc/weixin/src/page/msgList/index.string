@@ -1,0 +1,18 @@
+{{#data}}
+<div class="msgItem">
+  <a href="./msgDetail.html?id={{msgId}}&from={{sender}}" class="msgLink"></a>
+  <div class="msgImg">
+    <img src="{{imageHost}}{{imageUrl}}" alt="" srcset="">
+  </div>
+  <div class="msgContent">
+    <div class="msgSub">
+      <p class="msgTitle">{{sender}}</p>
+      <p class="msgDate">{{date}}</p>
+    </div>
+    <div class="msgSub padTop10">
+      <p class="msgDetail">{{tips}}&nbsp;{{content}}</span></p>
+      <p class="msgNotread" data-state="{{hasRead}}"></p>
+    </div>
+  </div>
+</div>
+{{/data}}

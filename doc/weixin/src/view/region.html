@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+  <%= require('html-loader!./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
+
+<body>
+  <header><a id="backLink" href="javascript:;"></a>
+    <p><%= htmlWebpackPlugin.options.title%></p>
+  </header>
+  <div class="section-common"></div>
+  <!--分类顶部 搜索框-->
+  <section id="home">
+    <div class="classify"> <a href="./region-find.html"><B langKey="region.label.findPlaceholder">Where are you
+          from?</B></a> </div>
+    <div class="section-classify">
+      <!--分类主体部分 开始-->
+      <div class="classify_main">
+
+        <!--分类左边菜单 开始-->
+        <!--<li class="active"><a>A</a></li>-->
+        <div id="classify_menu" class="classify_menu">
+          <ul>
+            <!--<li name="keyitem" data="0"><a>中国大陆</a></li>-->
+            <li name="keyitem" data="a"><a>A</a></li>
+            <li name="keyitem" data="b"><a>B</a></li>
+            <li name="keyitem" data="c"><a>C</a></li>
+            <li name="keyitem" data="d"><a>D</a></li>
+            <li name="keyitem" data="e"><a>E</a></li>
+            <li name="keyitem" data="f"><a>F</a></li>
+            <li name="keyitem" data="g"><a>G</a></li>
+            <li name="keyitem" data="h"><a>H</a></li>
+            <li name="keyitem" data="i"><a>I</a></li>
+            <li name="keyitem" data="j"><a>J</a></li>
+            <li name="keyitem" data="k"><a>K</a></li>
+            <li name="keyitem" data="l"><a>L</a></li>
+            <li name="keyitem" data="m"><a>M</a></li>
+            <li name="keyitem" data="n"><a>N</a></li>
+            <li name="keyitem" data="o"><a>O</a></li>
+            <li name="keyitem" data="p"><a>P</a></li>
+            <li name="keyitem" data="q"><a>Q</a></li>
+            <li name="keyitem" data="r"><a>R</a></li>
+            <li name="keyitem" data="s"><a>S</a></li>
+            <li name="keyitem" data="t"><a>T</a></li>
+            <li name="keyitem" data="u"><a>U</a></li>
+            <li name="keyitem" data="v"><a>V</a></li>
+            <li name="keyitem" data="y"><a>Y</a></li>
+            <li name="keyitem" data="z"><a>Z</a></li>
+          </ul>
+        </div>
+        <!--分类左边菜单 结束-->
+
+        <!--分类右边产品 开始-->
+        <div class="classify_pro">
+          <!--<p class="title">— 推荐区 —</p>-->
+          <div class="classify_pro_list">
+            <!--			<div class="pro" style="padding:7px 7px 6px 6px;">               
+               <p name="boxRegion" class="nospanChecked">阿富汗</p>
+            </div>
+			<div class="pro" style="padding:7px 7px 6px 6px;">               
+               
+            </div>
+			<div class="pro" style="padding:7px 7px 6px 6px;">                  
+           </div>-->
+          </div>
+        </div>
+        <!--分类右边产品 结束-->
+
+      </div>
+      <!--分类主体部分 结束-->
+    </div>
+
+    <!--底部导航 开始-->
+    <footer>
+      <div class="order-tj">
+        <input type="button" id="btnNext" value="" langKey="common.button.btnOk">
+      </div>
+    </footer>
+    <!--底部导航 结束-->
+  </section>
+
+
+  <!--弹窗 -->
+  <section id="popSetting">
+    <div id="bg"></div>
+    <div id="popbox2">
+      <div class="tire" id="away">
+        <!--<img src="images/delete2.png" />-->
+        <p>Language/语言设定</p>
+      </div>
+      <p class="count" id="localLang">English</p>
+      <ul class="nav-wo">
+        <li id="goSetting"><img src="<%= require('../images/1-icon0.png') %>" class="naicon" /><span>Language/语言设定</span>
+          <img id="phone" src="<%= require('../images/1-icon-next.png') %>" class="nanext" /></li>
+      </ul>
+      <input id="btnSetting" name="" type="button" class="tij-bn tij-bn2" value="OK(确定)" />
+    </div>
+  </section>
+  <!--弹窗 -------结束-------->
+
+  <section id="language">
+    <!--导航栏-->
+    <header id="headerCategory"><a id="backSetting"></a>
+      <p>Language/语言设定</p>
+    </header>
+
+    <div class="section-common" id="languageList">
+      <!--列表 开始-->
+      <div class="chosepro_list">
+        <ul>
+          <li><a class="languageItem" data="en" langText="English">English</a></li>
+          <li><a class="languageItem" data="fr" langText="Français">Français</a></li>
+          <li><a class="languageItem" data="zh-cn" langText="中文">中文</a></li>
+        </ul>
+      </div>
+      <!--列表 结束-->
+    </div>
+  </section>
+
+
+  <input type="hidden" id="hidNation" value="">
+
+  <input type="hidden" id="msgboxwitoutNation" value="" langKey="region.msgbox.witoutNation" />
+
+  <input type="hidden" id="msgboxAlertTitle" value="" langKey="common.msgbox.alertTitle" />
+  <input type="hidden" id="msgboxBtnOk" value="" langKey="common.msgbox.btnOk" />
+  <%= require('html-loader!./layout/footer.html') %>
+</body>
+</html>
